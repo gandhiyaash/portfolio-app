@@ -7,7 +7,7 @@ const syne = Syne({ subsets: ["latin"], weight: ["700", "800"], variable: "--fon
 const ibmPlexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Yash Gandhi | Systems Architect Prototype",
+  title: "Yash Gandhi | Systems Architect",
   description: "Systems Architect Portfolio",
 };
 
