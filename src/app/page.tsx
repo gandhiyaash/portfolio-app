@@ -62,35 +62,23 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* TRUST TICKER */}
-                <section className="py-24 bg-surface-container-lowest border-y border-white/5 overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-20 mb-12">
-                        <div className="md:w-1/2">
-                            <h2 className="font-syne text-3xl font-bold uppercase tracking-wide text-white mb-4">Built on a Solid Foundation</h2>
+                {/* TECH FOUNDATION */}
+                <section className="py-16 md:py-24 bg-surface-container-lowest border-y border-white/5">
+                    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-2xl mb-8">
+                            <h2 className="font-syne text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-4">Built on a Solid Foundation</h2>
                             <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Enterprise-grade reliability from Barclays — applied to every project I take on.</p>
                         </div>
-                    </div>
-
-                    <div 
-                        className="relative flex overflow-x-hidden w-full opacity-50 mt-16"
-                        style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
-                    >
-                        <motion.div 
-                            className="flex whitespace-nowrap items-center w-max"
-                            animate={{ x: ["0%", "-50%"] }}
-                            transition={{ ease: "linear", duration: 40, repeat: Infinity }}
-                        >
-                            {[...Array(2)].map((_, i) => (
-                                <div key={i} className="flex whitespace-nowrap items-center">
-                                    {["Barclays", "AWS", "TypeScript", "Go", "React", "React Native", "Next.js", "PostgreSQL", "Node.js", "Redis"].map((tech, j) => (
-                                        <div key={`${i}-${j}`} className="flex items-center">
-                                            <span className="font-syne text-3xl font-bold text-white uppercase tracking-widest mx-10 hover:text-[#F7931A] transition-colors">{tech}</span>
-                                            <span className="w-2 h-2 bg-[#F7931A] rounded-full opacity-50 shadow-[0_0_10px_#F7931A]"></span>
-                                        </div>
-                                    ))}
-                                </div>
+                        <div className="flex flex-wrap gap-2 md:gap-3">
+                            {["TypeScript", "Go", "React", "React Native", "Next.js", "Node.js", "PostgreSQL", "Redis", "AWS", "Barclays"].map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="px-3 py-1 rounded-full border border-neutral-700 bg-neutral-900/40 text-sm text-neutral-300 hover:bg-neutral-800 hover:border-neutral-600 transition-all duration-200 cursor-default"
+                                >
+                                    {tech}
+                                </span>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
                 </section>
 
