@@ -59,26 +59,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* TECH FOUNDATION */}
-                <section className="py-16 md:py-24 bg-surface-container-lowest border-y border-white/5">
-                    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="max-w-2xl mb-8">
-                            <h2 className="font-syne text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-4">Built on a Solid Foundation</h2>
-                            <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Enterprise-grade reliability from Barclays — applied to every project I take on.</p>
-                        </div>
-                        <div className="flex flex-wrap gap-2 md:gap-3">
-                            {["TypeScript", "Go", "React", "React Native", "Next.js", "Node.js", "PostgreSQL", "Redis", "AWS", "Barclays"].map((tech) => (
-                                <span
-                                    key={tech}
-                                    className="px-3 py-1 rounded-full border border-neutral-700 bg-neutral-900/40 text-sm text-neutral-300 hover:bg-neutral-800 hover:border-neutral-600 transition-all duration-200 cursor-default"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 {/* SERVICES */}
                 <section id="services" className="py-32 px-6 md:px-8 lg:px-20 bg-background relative z-10 border-b border-white/5">
                     <div className="max-w-7xl mx-auto">
@@ -88,7 +68,6 @@ export default function Home() {
                             viewport={{ once: true }}
                             className="mb-20"
                         >
-                            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Services</span>
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">What I Can Help<br className="hidden md:block"/> You With</h2>
                         </motion.div>
 
@@ -192,7 +171,6 @@ export default function Home() {
                             className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6"
                         >
                             <div>
-                                <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Client Signal</span>
                                 <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">What Clients Say</h2>
                             </div>
                         </motion.div>
@@ -249,7 +227,6 @@ export default function Home() {
                             viewport={{ once: true }}
                             className="mb-20"
                         >
-                            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Who This Is For</span>
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">Who I Work<br className="hidden md:block"/> Best With</h2>
                         </motion.div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -308,7 +285,6 @@ export default function Home() {
                             viewport={{ once: true }}
                             className="mb-20"
                         >
-                            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Process</span>
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">How I Work</h2>
                         </motion.div>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -361,7 +337,6 @@ export default function Home() {
                             viewport={{ once: true }}
                             className="mb-20"
                         >
-                            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Why Me</span>
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">Why Work<br className="hidden md:block"/> With Me</h2>
                         </motion.div>
 
@@ -425,7 +400,6 @@ export default function Home() {
                             className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6"
                         >
                             <div>
-                                <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Case Studies</span>
                                 <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">Selected Work</h2>
                             </div>
                             <div className="h-px bg-outline-variant/20 flex-grow mx-4 md:mx-12 hidden sm:block"></div>
@@ -575,7 +549,7 @@ export default function Home() {
                         >
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase mb-8">
                                 Got a problem worth solving<br className="hidden md:block"/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]"> — or something that&apos;s already breaking?</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]"> or something that&apos;s already breaking?</span>
                             </h2>
                             <p className="font-mono text-base text-on-surface-variant max-w-2xl mx-auto mb-4 leading-relaxed">
                                 Tell me what you&apos;re building — and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.

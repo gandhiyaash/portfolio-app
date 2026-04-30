@@ -48,11 +48,10 @@ export default function About() {
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-24"
                 >
-                    <span className="font-mono text-xs text-[#F7931A] uppercase tracking-[0.3em] font-bold block mb-4">[ Engineer_Profile ]</span>
                     <h1 className="font-syne text-5xl md:text-7xl font-extrabold tracking-tighter uppercase text-white mb-8">
                         About Me
                     </h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div className="max-w-2xl">
                         <div className="space-y-6">
                             <p className="font-mono text-base text-on-surface-variant leading-relaxed border-l-2 border-[#F7931A] pl-6">
                                 I&apos;m a Senior Full-Stack Engineer who specialises in building the infrastructure that lets startups scale without breaking.
@@ -67,32 +66,6 @@ export default function About() {
                                 If you&apos;re a founder who needs someone who can own the technical side end-to-end — from architecture decisions to deployment — I&apos;m the right person.
                             </p>
                         </div>
-                        <div className="glass p-8 space-y-6">
-                            <div>
-                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-2">Status</span>
-                                <div className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse"></span>
-                                    <span className="font-mono text-sm text-white">Available Now</span>
-                                </div>
-                            </div>
-                            <div>
-                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-2">Location</span>
-                                <span className="font-mono text-sm text-on-surface-variant">Remote — Worldwide</span>
-                            </div>
-                            <div>
-                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-2">Timezone</span>
-                                <span className="font-mono text-sm text-on-surface-variant">IST (UTC +5:30) — flexible for UK/EU/US overlap</span>
-                            </div>
-                            <div>
-                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-2">Engagement Types</span>
-                                <span className="font-mono text-sm text-on-surface-variant">Fixed-scope projects, monthly retainers, fractional CTO</span>
-                            </div>
-                            <div className="pt-4 border-t border-white/5 flex gap-6">
-                                <a href="https://linkedin.com/in/gandhiyash24" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] uppercase tracking-widest text-white/50 hover:text-[#F7931A] transition-colors">LinkedIn</a>
-                                <a href="https://github.com/gandhiyaash" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] uppercase tracking-widest text-white/50 hover:text-[#F7931A] transition-colors">GitHub</a>
-                                <a href="https://x.com/__yashgandhi__" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] uppercase tracking-widest text-white/50 hover:text-[#F7931A] transition-colors">X</a>
-                            </div>
-                        </div>
                     </div>
                 </motion.header>
 
@@ -103,7 +76,6 @@ export default function About() {
                     viewport={{ once: true }}
                     className="mb-24"
                 >
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Career Path</span>
                     <h2 className="font-syne text-3xl md:text-4xl font-extrabold uppercase text-white mb-12">Experience</h2>
 
                     <div className="space-y-6">
@@ -129,7 +101,6 @@ export default function About() {
                     viewport={{ once: true }}
                     className="mb-24"
                 >
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Tools of Trade</span>
                     <h2 className="font-syne text-3xl md:text-4xl font-extrabold uppercase text-white mb-12">Tech Stack</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -154,23 +125,29 @@ export default function About() {
                     viewport={{ once: true }}
                     className="scroll-mt-24"
                 >
-                    <div className="flex items-center gap-4 mb-4">
-                        <div className="h-px w-12 bg-[#F7931A]/50"></div>
-                        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#F7931A] font-bold">Start a Conversation</span>
-                        <div className="h-px w-12 bg-[#F7931A]/50"></div>
+                    {/* Marketing Hero Header */}
+                    <div className="text-center py-20 px-4">
+                        <h2 className="font-syne text-5xl md:text-7xl font-extrabold uppercase leading-[1.05] text-white mb-2">
+                            Got a problem<br />worth solving
+                        </h2>
+                        <h2 className="font-syne text-5xl md:text-7xl font-extrabold uppercase leading-[1.05] text-[#F7931A] mb-8">
+                            or something<br />that&apos;s already breaking?
+                        </h2>
+                        <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-10 leading-relaxed">
+                            Tell me what you&apos;re building — and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
+                        </p>
+                        <a
+                            href="#contact-form"
+                            className="inline-flex items-center gap-3 bg-[#F7931A] text-[#4b2800] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95"
+                        >
+                            Start a Project
+                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
                     </div>
-                    <h2 className="font-syne text-4xl md:text-5xl font-extrabold uppercase text-white mb-4">
-                        Let&apos;s fix your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">next big problem</span>
-                    </h2>
-                    <p className="font-mono text-sm text-on-surface-variant mb-12 max-w-xl leading-relaxed">
-                        Describe what you&apos;re building and I&apos;ll get back within 24 hours. No sales call, no fluff — just a straight answer on whether and how I can help.
-                    </p>
 
-                    <div className="glass p-5 sm:p-8 md:p-12">
+                    <div id="contact-form" className="glass p-5 sm:p-8 md:p-12">
                         <ContactForm />
                     </div>
-
-
                 </motion.section>
             </main>
 

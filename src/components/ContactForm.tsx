@@ -49,7 +49,6 @@ export const ContactForm = () => {
                     <span>Message received. I&apos;ll get back to you within 24 hours.</span>
                 </div>
                 <div>
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Next Steps</span>
                     <h3 className="font-syne text-2xl font-extrabold tight-tracked text-white uppercase mb-8">What Happens Next</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {steps.map((item, i) => (

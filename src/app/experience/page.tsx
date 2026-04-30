@@ -21,7 +21,6 @@ export default function Experience() {
                     animate={{ opacity: 1, y: 0 }}
                     className="space-y-4 mb-16 text-center"
                 >
-                    <span className="font-mono text-xs text-[#F7931A] uppercase tracking-[0.3em] font-bold block">[ Selection_Index ]</span>
                     <h1 className="font-syne text-5xl md:text-7xl font-extrabold tracking-tighter uppercase text-white">Experience</h1>
                     <p className="text-on-surface-variant text-sm md:text-base font-mono opacity-80 uppercase tracking-widest">Architectural timeline</p>
                 </motion.header>
@@ -54,10 +53,6 @@ export default function Experience() {
                                     <div className="group relative glass p-8 hover:bg-surface-container-high/80 transition-all duration-300 hover:border-[#F7931A]/30">
                                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                                             <div className={`flex flex-col ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
-                                                <div className="flex items-center gap-3 mb-2">
-                                                    <span className="font-mono text-[10px] text-[#F7931A] uppercase tracking-widest font-bold">{proj.id} / {proj.type}</span>
-                                                    {proj.status && <span className="font-mono text-[9px] px-2 py-0.5 border border-white/20 text-white/70 uppercase">{proj.status}</span>}
-                                                </div>
                                                 <h2 className="font-syne text-3xl font-bold uppercase tracking-tight text-white">{proj.title}</h2>
                                             </div>
                                             <span className="material-symbols-outlined text-white/20 group-hover:text-[#F7931A] transition-colors text-3xl hidden md:block">{proj.icon}</span>
@@ -91,11 +86,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="mt-32 text-center space-y-8 glass p-16"
                 >
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                        <div className="h-[1px] w-12 bg-[#F7931A]/50"></div>
-                        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#F7931A] font-bold">Collaboration Node</span>
-                        <div className="h-[1px] w-12 bg-[#F7931A]/50"></div>
-                    </div>
+
                     <h3 className="font-syne text-4xl md:text-6xl font-extrabold uppercase tracking-tighter text-white max-w-2xl mx-auto leading-[1.1]">
                         Let's architect your next <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">product</span>
                     </h3>

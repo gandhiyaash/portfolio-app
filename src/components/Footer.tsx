@@ -16,9 +16,7 @@ export const Footer = () => (
                 <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#F7931A] transition-colors" href="https://github.com/gandhiyaash" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#F7931A] transition-colors" href="https://x.com/__yashgandhi__" target="_blank" rel="noopener noreferrer">X</a>
             </div>
-            <div className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A]/60">
-                LATENCY: 14MS // BUILT TO LAST
-            </div>
+
         </div>
     </footer>
 );
