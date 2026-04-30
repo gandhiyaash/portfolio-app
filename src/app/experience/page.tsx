@@ -50,12 +50,12 @@ export default function Experience() {
                                     viewport={{ once: true, margin: "-100px" }}
                                     className={`w-full md:w-1/2 pl-12 md:pl-0 ${idx % 2 === 0 ? 'md:text-left md:pr-16' : 'md:text-right md:pl-16'}`}
                                 >
-                                    <div className="group relative glass p-8 hover:bg-surface-container-high/80 transition-all duration-300 hover:border-[#F7931A]/30">
+                                    <div className="group relative glass p-8 hover:bg-surface-container-high/80 transition-all duration-300 hover:border-[#22C55E]/30">
                                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                                             <div className={`flex flex-col ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
                                                 <h2 className="font-syne text-3xl font-bold uppercase tracking-tight text-white">{proj.title}</h2>
                                             </div>
-                                            <span className="material-symbols-outlined text-white/20 group-hover:text-[#F7931A] transition-colors text-3xl hidden md:block">{proj.icon}</span>
+                                            <span className="material-symbols-outlined text-white/20 group-hover:text-[#22C55E] transition-colors text-3xl hidden md:block">{proj.icon}</span>
                                         </div>
                                         <p className="text-on-surface-variant text-base mb-8 leading-relaxed">
                                             {proj.desc}
@@ -90,7 +90,7 @@ export default function Experience() {
                     <h3 className="font-syne text-4xl md:text-6xl font-extrabold uppercase tracking-tighter text-white max-w-2xl mx-auto leading-[1.1]">
                         Let's architect your next <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">product</span>
                     </h3>
-                    <Link href="/about#contact" className="inline-block bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold px-12 py-5 uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all active:scale-95 mt-4">
+                    <Link href="/about#contact" className="inline-block bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold px-12 py-5 uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all active:scale-95 mt-4">
                         Discuss Project
                     </Link>
                 </motion.div>

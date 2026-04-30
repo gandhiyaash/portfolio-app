@@ -11,10 +11,10 @@ export const Footer = () => (
                 </div>
             </div>
             <div className="flex gap-8">
-                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#F7931A] transition-colors" href="mailto:yashbtc@proton.me">Email</a>
-                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#F7931A] transition-colors" href="https://linkedin.com/in/gandhiyash24" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#F7931A] transition-colors" href="https://github.com/gandhiyaash" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#F7931A] transition-colors" href="https://x.com/__yashgandhi__" target="_blank" rel="noopener noreferrer">X</a>
+                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#22C55E] transition-colors" href="mailto:yashbtc@proton.me">Email</a>
+                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#22C55E] transition-colors" href="https://linkedin.com/in/gandhiyash24" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#22C55E] transition-colors" href="https://github.com/gandhiyaash" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a className="font-mono text-[10px] uppercase tracking-widest text-[#E5E2E1]/50 hover:text-[#22C55E] transition-colors" href="https://x.com/__yashgandhi__" target="_blank" rel="noopener noreferrer">X</a>
             </div>
 
         </div>

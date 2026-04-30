@@ -138,7 +138,7 @@ export default function About() {
                         </p>
                         <a
                             href="#contact-form"
-                            className="inline-flex items-center gap-3 bg-[#F7931A] text-[#4b2800] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95"
+                            className="inline-flex items-center gap-3 bg-[#F7931A] text-[#4b2800] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(34,197,94,0.5)] transition-all duration-300 active:scale-95"
                         >
                             Start a Project
                             <span className="material-symbols-outlined text-sm">arrow_forward</span>

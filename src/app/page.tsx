@@ -39,11 +39,11 @@ export default function Home() {
                                 Most of my work comes from referrals — I only take on a few new projects each month.
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap gap-6">
-                                <Link href="/experience" className="bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all duration-300 active:scale-95 group">
+                                <Link href="/experience" className="bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-300 active:scale-95 group">
                                     View Work
                                     <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                 </Link>
-                                <Link href="/about#contact" className="border border-[#F7931A]/50 text-[#F7931A] px-8 py-4 font-mono font-bold uppercase tracking-widest hover:bg-[#F7931A]/10 transition-all duration-300 active:scale-95 text-center flex items-center justify-center gap-2">
+                                <Link href="/about#contact" className="border border-[#F7931A]/50 text-[#F7931A] px-8 py-4 font-mono font-bold uppercase tracking-widest hover:bg-[#22C55E]/10 transition-all duration-300 active:scale-95 text-center flex items-center justify-center gap-2">
                                     Start a Project
                                 </Link>
                             </div>
@@ -122,7 +122,7 @@ export default function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.08 }}
-                                    className="glass p-8 flex flex-col gap-6 hover:border-[#F7931A]/40 hover:shadow-[0_8px_40px_rgba(247,147,26,0.1)] transition-all duration-300 group"
+                                    className="glass p-8 flex flex-col gap-6 hover:border-[#22C55E]/40 hover:shadow-[0_8px_40px_rgba(34,197,94,0.1)] transition-all duration-300 group"
                                 >
                                     <div className="flex items-start justify-between">
                                         <span className="material-symbols-outlined text-[#F7931A] text-3xl">{service.icon}</span>
@@ -153,7 +153,7 @@ export default function Home() {
                             <p className="font-mono text-sm text-on-surface-variant">
                                 Not sure what you need? <span className="text-white">Let&apos;s talk through your project</span> — no commitment, 30 minutes.
                             </p>
-                            <Link href="/about#contact" className="font-mono text-xs font-bold uppercase tracking-widest text-[#F7931A] border border-[#F7931A]/30 px-6 py-3 hover:bg-[#F7931A]/10 transition-all duration-200 whitespace-nowrap flex items-center gap-2">
+                            <Link href="/about#contact" className="font-mono text-xs font-bold uppercase tracking-widest text-[#F7931A] border border-[#F7931A]/30 px-6 py-3 hover:bg-[#22C55E]/10 transition-all duration-200 whitespace-nowrap flex items-center gap-2">
                                 Book a Discovery Call
                                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
                             </Link>
@@ -263,7 +263,7 @@ export default function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="glass p-8 flex gap-6 hover:border-[#F7931A]/20 transition-all duration-300"
+                                    className="glass p-8 flex gap-6 hover:border-[#22C55E]/20 transition-all duration-300"
                                 >
                                     <span className="material-symbols-outlined text-[#F7931A] text-3xl flex-shrink-0 mt-1">{item.icon}</span>
                                     <div>
@@ -316,7 +316,7 @@ export default function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="glass p-8 flex flex-col gap-4 hover:border-[#F7931A]/20 transition-all duration-300 relative overflow-hidden"
+                                    className="glass p-8 flex flex-col gap-4 hover:border-[#22C55E]/20 transition-all duration-300 relative overflow-hidden"
                                 >
                                     <span className="font-syne text-6xl font-extrabold text-white/5 absolute top-4 right-4 select-none leading-none">{item.step}</span>
                                     <span className="font-mono text-[10px] text-[#F7931A] uppercase tracking-widest font-bold">{item.step}</span>
@@ -369,7 +369,7 @@ export default function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="glass p-8 flex gap-6 hover:border-[#F7931A]/20 transition-all duration-300"
+                                    className="glass p-8 flex gap-6 hover:border-[#22C55E]/20 transition-all duration-300"
                                 >
                                     <span className="material-symbols-outlined text-[#F7931A] text-3xl flex-shrink-0 mt-1">{item.icon}</span>
                                     <div>
@@ -412,7 +412,7 @@ export default function Home() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="md:col-span-7 group glass transition-all duration-500 hover:border-[#F7931A]/40 hover:shadow-[0_8px_48px_rgba(247,147,26,0.09)] relative overflow-hidden"
+                                className="md:col-span-7 group glass transition-all duration-500 hover:border-[#22C55E]/40 hover:shadow-[0_8px_48px_rgba(34,197,94,0.09)] relative overflow-hidden"
                             >
                                 <div className="p-8 md:p-12 flex flex-col h-full min-h-[500px] justify-between relative z-10">
                                     <div>
@@ -441,7 +441,7 @@ export default function Home() {
                                             <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">Redis</span>
                                         </div>
                                     </div>
-                                    <Link href="/sipstr" className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm group-hover:text-[#F7931A] transition-colors w-max">
+                                    <Link href="/sipstr" className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm group-hover:text-[#22C55E] transition-colors w-max">
                                         [ View Case Study ]
                                         <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </Link>
@@ -486,7 +486,7 @@ export default function Home() {
                                             <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">PostgreSQL</span>
                                         </div>
                                     </div>
-                                    <Link href="/kaps" className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm hover:text-white transition-colors text-left text-white/50 group-hover:text-[#F7931A] w-max">
+                                    <Link href="/kaps" className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm hover:text-white transition-colors text-left text-white/50 group-hover:text-[#22C55E] w-max">
                                         [ View Case Study ]
                                         <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </Link>
@@ -498,7 +498,7 @@ export default function Home() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="md:col-span-12 group glass transition-all duration-500 hover:border-[#F7931A]/35 hover:shadow-[0_8px_48px_rgba(247,147,26,0.07)] relative overflow-hidden"
+                                className="md:col-span-12 group glass transition-all duration-500 hover:border-[#22C55E]/35 hover:shadow-[0_8px_48px_rgba(34,197,94,0.07)] relative overflow-hidden"
                             >
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                                     <div className="p-8 md:p-16 flex flex-col justify-center order-2 md:order-1 relative z-10">
@@ -524,7 +524,7 @@ export default function Home() {
                                                 <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">Web3.js</span>
                                             </div>
                                         </div>
-                                        <button className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm group-hover:text-[#F7931A] transition-colors text-left w-max opacity-50 cursor-default">
+                                        <button className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm group-hover:text-[#22C55E] transition-colors text-left w-max opacity-50 cursor-default">
                                             [ Case Study Coming Soon ]
                                             <span className="material-symbols-outlined">hourglass_empty</span>
                                         </button>
@@ -554,7 +554,7 @@ export default function Home() {
                             <p className="font-mono text-base text-on-surface-variant max-w-2xl mx-auto mb-4 leading-relaxed">
                                 Tell me what you&apos;re building — and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
                             </p>
-                            <Link href="/about#contact" className="inline-flex items-center gap-4 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-10 py-5 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95 group text-base mt-8 mx-auto">
+                            <Link href="/about#contact" className="inline-flex items-center gap-4 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-10 py-5 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all duration-300 active:scale-95 group text-base mt-8 mx-auto">
                                 Start a Project
                                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </Link>
