@@ -86,9 +86,9 @@ export const CaseStudyLayout = (props: CaseStudyProps) => {
                             </ul>
                             <div className="mt-12 pt-8 border-t border-outline-variant/20">
                                 <h4 className="font-syne text-lg font-bold mb-4 text-white">Need a scalable system?</h4>
-                                <a href="mailto:yashbtc@proton.me?subject=Project%20Inquiry" className="block text-center w-full bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold py-4 uppercase text-sm tracking-wider hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all active:scale-95">
+                                <Link href="/about#contact" className="block text-center w-full bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold py-4 uppercase text-sm tracking-wider hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all active:scale-95">
                                     Discuss Project
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

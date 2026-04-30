@@ -37,7 +37,7 @@ export default function KapsCaseStudy() {
                 { title: "Modular Monolith architecture", desc: "Designed backend boundaries explicitly by domain rather than adopting microservices prematurely, avoiding distributed tracing overhead while maintaining a clear migration path." },
                 { title: "PostGIS Distance Math", desc: "Shifted Haversine distance calculations for local vs. outstation pricing directly into PostgreSQL via PostGIS, keeping heavy math close to the data." }
             ]}
-            impact="Enabled zero-code city expansion. Ensured absolute operational safety via dual-layer access control. Maintained high developer velocity across parallel teams."
+            impact="~3 hours of daily manual ops eliminated. Scaled to 5 cities without adding headcount. Zero permission-related incidents post-launch."
         />
     );
 }

@@ -7,7 +7,7 @@ export default function Experience() {
     const projects = [
         { id: '01', type: 'NODE', title: 'Sipstr', icon: 'local_bar', desc: 'Real-time bar ordering platform optimized for high-concurrency environments.', tags: ['React Native', 'AWS', 'Socket.io'], path: '/sipstr', status: 'LIVE CASE' },
         { id: '02', type: 'FLOW', title: 'KAPS Admin', icon: 'analytics', desc: 'Enterprise-grade dashboard for logistics tracking and fleet orchestration.', tags: ['Next.js', 'PostgreSQL', 'TypeScript'], path: '/kaps', status: 'ENTERPRISE' },
-        { id: '03', type: 'SYNC', title: 'BitMeet', icon: 'video_call', desc: 'Encrypted peer-to-peer conferencing tool using WebRTC and blockchain auth.', tags: ['WebRTC', 'LND Node', 'Go'] }
+        { id: '03', type: 'SYNC', title: 'BitMeet', icon: 'video_call', desc: 'Bitcoin-native meetup platform using Lightning Network for micro-staking event attendance. Built with Go backend, LND node integration, and WebRTC for P2P conferencing.', tags: ['WebRTC', 'LND Node', 'Go'] }
     ];
 
     return (
@@ -99,9 +99,9 @@ export default function Experience() {
                     <h3 className="font-syne text-4xl md:text-6xl font-extrabold uppercase tracking-tighter text-white max-w-2xl mx-auto leading-[1.1]">
                         Let's architect your next <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">product</span>
                     </h3>
-                    <a href="mailto:yashbtc@proton.me?subject=Project%20Inquiry" className="inline-block bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold px-12 py-5 uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all active:scale-95 mt-4">
+                    <Link href="/about#contact" className="inline-block bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold px-12 py-5 uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all active:scale-95 mt-4">
                         Discuss Project
-                    </a>
+                    </Link>
                 </motion.div>
             </main>
             <Footer />
