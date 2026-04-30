@@ -170,10 +170,7 @@ export default function About() {
                         <ContactForm />
                     </div>
 
-                    <p className="font-mono text-[10px] text-white/30 mt-6 text-center uppercase tracking-widest">
-                        Or email directly:{" "}
-                        <a href="mailto:yashbtc@proton.me" className="hover:text-[#F7931A] transition-colors">yashbtc@proton.me</a>
-                    </p>
+
                 </motion.section>
             </main>
 

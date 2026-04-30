@@ -34,6 +34,43 @@ export const ContactForm = () => {
         }
     };
 
+    const steps = [
+        { step: "01", title: "Message Received", description: "Your message is in my inbox. I read every one personally — no automated replies." },
+        { step: "02", title: "30-Minute Call", description: "I'll reach out within 24 hours to schedule a quick call to understand what you're building." },
+        { step: "03", title: "Clear Plan + Timeline", description: "I give you a concrete scope and honest feedback — before any commitment." },
+        { step: "04", title: "We Start Building", description: "Once we're aligned, we move fast. No delays, no hand-holding required." }
+    ];
+
+    if (state === "success") {
+        return (
+            <div className="space-y-10">
+                <div className="flex items-start gap-3 font-mono text-sm text-emerald-400 border border-emerald-400/20 px-4 py-3 bg-emerald-400/5">
+                    <span className="material-symbols-outlined text-base shrink-0 mt-0.5">check_circle</span>
+                    <span>Message received. I&apos;ll get back to you within 24 hours.</span>
+                </div>
+                <div>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Next Steps</span>
+                    <h3 className="font-syne text-2xl font-extrabold tight-tracked text-white uppercase mb-8">What Happens Next</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {steps.map((item, i) => (
+                            <div key={item.step} className="glass p-6 flex flex-col gap-3">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-full border border-[#F7931A]/50 bg-[#131313] flex items-center justify-center flex-shrink-0 shadow-[0_0_12px_rgba(247,147,26,0.1)]">
+                                        <span className="font-mono text-[#F7931A] font-bold text-[10px] tracking-widest">{item.step}</span>
+                                    </div>
+                                    {i < 3 && <div className="hidden sm:block h-px flex-1 bg-gradient-to-r from-[#F7931A]/20 to-transparent" />}
+                                </div>
+                                <h4 className="font-syne text-base font-bold uppercase text-white">{item.title}</h4>
+                                <p className="font-mono text-xs text-on-surface-variant leading-relaxed">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+            </div>
+        );
+    }
+
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -92,13 +129,6 @@ export const ContactForm = () => {
                 />
             </div>
 
-            {state === "success" && (
-                <div className="flex items-start gap-3 font-mono text-sm text-emerald-400 border border-emerald-400/20 px-4 py-3 bg-emerald-400/5">
-                    <span className="material-symbols-outlined text-base shrink-0 mt-0.5">check_circle</span>
-                    <span>Message received. I&apos;ll get back to you within 24 hours.</span>
-                </div>
-            )}
-
             {state === "error" && (
                 <div className="flex items-start gap-3 font-mono text-sm text-red-400 border border-red-400/20 px-4 py-3 bg-red-400/5">
                     <span className="material-symbols-outlined text-base shrink-0 mt-0.5">error</span>
@@ -109,13 +139,11 @@ export const ContactForm = () => {
 
             <button
                 type="submit"
-                disabled={state === "sending" || state === "success"}
+                disabled={state === "sending"}
                 className="w-full bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-6 sm:px-8 py-4 font-mono font-bold uppercase tracking-wider sm:tracking-widest text-sm flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {state === "sending" ? (
                     <>Sending...</>
-                ) : state === "success" ? (
-                    <>Sent<span className="material-symbols-outlined text-sm">check</span></>
                 ) : (
                     <>Send Message<span className="material-symbols-outlined text-sm">send</span></>
                 )}

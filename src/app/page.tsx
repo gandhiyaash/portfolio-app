@@ -32,9 +32,6 @@ export default function Home() {
                             <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
                                 <span className="text-white opacity-80">Enterprise rigour from Barclays. Startup speed from ground-up builds.</span>
                             </p>
-                            <p className="font-mono text-sm max-w-xl mb-4 pl-6 leading-relaxed">
-                                <span className="text-[#F7931A]/70">Typical projects: $1k–$5k+ depending on scope. Fixed pricing available after a quick call.</span>
-                            </p>
                             <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-2 pl-6 leading-relaxed">
                                 Most clients come to me after something breaks. I help you build it right the first time.
                             </p>
@@ -182,6 +179,64 @@ export default function Home() {
                                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
                             </Link>
                         </motion.div>
+                    </div>
+                </section>
+
+                {/* TESTIMONIALS */}
+                <section className="py-32 px-6 md:px-8 lg:px-20 bg-surface-container-lowest border-y border-white/5 relative z-10">
+                    <div className="max-w-7xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6"
+                        >
+                            <div>
+                                <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Client Signal</span>
+                                <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">What Clients Say</h2>
+                            </div>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                {
+                                    quote: "Platform was live in 10 weeks. Ordering, queue management, payouts — all working day one. Didn't have to chase him once. Things just got done.",
+                                    name: "Founder, Sipstr",
+                                    role: "",
+                                    placeholder: true
+                                },
+                                {
+                                    quote: "5 service types, multiple cities, pricing that changed by the hour. Yash built something that handled all of it — and set it up so our team could keep going without him.",
+                                    name: "Founder, KAPS",
+                                    role: "",
+                                    placeholder: true
+                                },
+                                {
+                                    quote: "Most engineers ask what to build. Yash asked why. That difference meant the final product was better than what we spec'd.",
+                                    name: "Client",
+                                    role: "Engineering Lead",
+                                    placeholder: true
+                                }
+                            ].map((t, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="glass p-8 flex flex-col gap-6 relative"
+                                >
+                                    <span className="font-syne text-5xl text-[#F7931A]/20 leading-none select-none absolute top-4 left-6">&ldquo;</span>
+                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed pt-6 italic">{t.quote}</p>
+                                    <div className="mt-auto pt-4 border-t border-white/5">
+                                        <div className="font-syne text-sm font-bold text-white uppercase">{t.name}</div>
+                                        {t.role && <div className="font-mono text-[10px] text-[#F7931A] uppercase tracking-widest mt-1">{t.role}</div>}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+
+
                     </div>
                 </section>
 
@@ -510,118 +565,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* TESTIMONIALS */}
-                <section className="py-32 px-6 md:px-8 lg:px-20 bg-surface-container-lowest border-y border-white/5 relative z-10">
-                    <div className="max-w-7xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6"
-                        >
-                            <div>
-                                <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Client Signal</span>
-                                <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">What Clients Say</h2>
-                            </div>
-                        </motion.div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {[
-                                {
-                                    quote: "Platform was live in 10 weeks. Ordering, queue management, payouts — all working day one. Didn't have to chase him once. Things just got done.",
-                                    name: "Founder, Sipstr",
-                                    role: "",
-                                    placeholder: true
-                                },
-                                {
-                                    quote: "5 service types, multiple cities, pricing that changed by the hour. Yash built something that handled all of it — and set it up so our team could keep going without him.",
-                                    name: "Founder, KAPS",
-                                    role: "",
-                                    placeholder: true
-                                },
-                                {
-                                    quote: "Most engineers ask what to build. Yash asked why. That difference meant the final product was better than what we spec'd.",
-                                    name: "Client",
-                                    role: "Engineering Lead",
-                                    placeholder: true
-                                }
-                            ].map((t, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="glass p-8 flex flex-col gap-6 relative"
-                                >
-                                    <span className="font-syne text-5xl text-[#F7931A]/20 leading-none select-none absolute top-4 left-6">&ldquo;</span>
-                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed pt-6 italic">{t.quote}</p>
-                                    <div className="mt-auto pt-4 border-t border-white/5">
-                                        <div className="font-syne text-sm font-bold text-white uppercase">{t.name}</div>
-                                        {t.role && <div className="font-mono text-[10px] text-[#F7931A] uppercase tracking-widest mt-1">{t.role}</div>}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-
-                    </div>
-                </section>
-
-                {/* WHAT HAPPENS NEXT */}
-                <section className="py-32 px-6 md:px-8 lg:px-20 bg-surface-container-lowest border-b border-white/5 relative z-10">
-                    <div className="max-w-7xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="mb-20"
-                        >
-                            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Next Steps</span>
-                            <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">What Happens Next</h2>
-                        </motion.div>
-                        <div className="relative">
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                                {[
-                                    { step: "01", title: "You Reach Out", description: "Share your idea or problem — no need to have it perfectly scoped." },
-                                    { step: "02", title: "30-Minute Call", description: "A quick call to understand what you're building and what's blocking you." },
-                                    { step: "03", title: "Clear Plan + Timeline", description: "I give you a concrete scope and honest feedback — before any commitment." },
-                                    { step: "04", title: "We Start Building", description: "Once we're aligned, we move fast. No delays, no hand-holding required." }
-                                ].map((item, i) => (
-                                    <motion.div
-                                        key={item.step}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: i * 0.1 }}
-                                        className="flex flex-col"
-                                    >
-                                        {/* Circle + connector row */}
-                                        <div className="flex items-center mb-8">
-                                            <div className="w-14 h-14 rounded-full border border-[#F7931A]/50 bg-[#131313] flex items-center justify-center flex-shrink-0 relative z-10 shadow-[0_0_16px_rgba(247,147,26,0.1)]">
-                                                <span className="font-mono text-[#F7931A] font-bold text-xs tracking-widest">{item.step}</span>
-                                            </div>
-                                            {i < 3 && (
-                                                <div className="hidden md:block h-px flex-1 bg-gradient-to-r from-[#F7931A]/30 to-transparent ml-3" />
-                                            )}
-                                        </div>
-                                        <h3 className="font-syne text-xl font-bold uppercase text-white mb-3">{item.title}</h3>
-                                        <p className="font-mono text-sm text-on-surface-variant leading-relaxed">{item.description}</p>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            className="font-mono text-xs text-white/40 mt-10 text-center"
-                        >
-                            If it&apos;s a good fit, I&apos;ll outline next steps immediately after the call.
-                        </motion.p>
-                    </div>
-                </section>
-
                 {/* FINAL CTA */}
                 <section className="py-40 px-6 md:px-8 lg:px-20 bg-background relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
@@ -637,13 +580,7 @@ export default function Home() {
                             <p className="font-mono text-base text-on-surface-variant max-w-2xl mx-auto mb-4 leading-relaxed">
                                 Tell me what you&apos;re building — and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
                             </p>
-                            <p className="font-mono text-sm text-on-surface-variant/60 max-w-xl mx-auto mb-4 leading-relaxed">
-                                No agency markup. No disappearing after delivery. Just a senior engineer who owns the result.
-                            </p>
-                            <p className="font-mono text-sm text-white/50 max-w-xl mx-auto mb-12 leading-relaxed">
-                                You&apos;ll always know what&apos;s happening — no black box, no surprises.
-                            </p>
-                            <Link href="/about#contact" className="inline-flex items-center gap-4 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-10 py-5 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95 group text-base">
+                            <Link href="/about#contact" className="inline-flex items-center gap-4 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-10 py-5 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95 group text-base mt-8 mx-auto">
                                 Start a Project
                                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </Link>
