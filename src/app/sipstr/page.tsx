@@ -5,7 +5,7 @@ export default function SipstrCaseStudy() {
     return (
         <CaseStudyLayout 
             title="Sipstr"
-            subtitle="On-Demand Delivery Infrastructure. Architected a 4-sided alcohol delivery marketplace supporting complex geospatial routing and automated multi-vendor payouts."
+            subtitle="On-Demand Delivery Infrastructure. Architected a 4-sided alcohol delivery marketplace with a cross-platform mobile app using React Native, supporting complex geospatial routing and automated multi-vendor payouts."
             tags={["Java 21", "Spring Boot", "PostgreSQL", "PostGIS", "RabbitMQ", "Stripe Connect"]}
             role="Lead Product Engineer & Architect"
             problem={`Alcohol delivery is operationally volatile. It requires strict regulatory compliance, irregular delivery territories, and handling real-time inventory changes where post-payment order modifications (and subsequent partial refunds) are exceptionally common.`}

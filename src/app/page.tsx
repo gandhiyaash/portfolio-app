@@ -19,17 +19,12 @@ export default function Home() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="text-left"
                         >
-                            <div className="flex items-center gap-3 mb-8">
-                                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse"></span>
-                                <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400 font-bold">Available for Freelance &amp; Contract Work</span>
-                            </div>
-
                             <h1 className="font-syne text-5xl md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
                                 I build scalable React apps<br className="hidden md:block"/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">&amp; dashboards that don&apos;t break as you grow.</span>
                             </h1>
                             <p className="font-mono text-base md:text-lg text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
-                                Full-Stack Engineer focused on React, Node.js, and production systems that scale under real-world load — built for real users from day one, not just a demo.
+                                Full-Stack Engineer focused on React, React Native (Expo), Node.js, and production systems that scale under real-world load — built for real users from day one, not just a demo.
                             </p>
                             <p className="font-mono text-sm text-white/50 max-w-xl mb-4 pl-6 leading-relaxed">
                                 Built and deployed systems handling real users, real transactions, and real operational workflows.
@@ -130,9 +125,9 @@ export default function Home() {
                                 },
                                 {
                                     icon: "developer_board",
-                                    title: "React & Next.js Web Apps",
-                                    description: "Fast, responsive, built to perform. Clean code, real Core Web Vitals scores, and a codebase your team can maintain.",
-                                    items: ["React / Next.js development", "TypeScript & modern stack", "Performance optimisation", "SEO & Core Web Vitals"],
+                                    title: "Web & Mobile Apps (React + React Native)",
+                                    description: "Fast, responsive, and cross-platform. Web apps and native mobile experiences built on the same codebase — clean code, real Core Web Vitals scores, and a codebase your team can maintain.",
+                                    items: ["React / Next.js development", "React Native (Expo)", "Cross-platform mobile apps", "TypeScript & modern stack", "Performance optimisation", "SEO & Core Web Vitals"],
                                     tag: "FLEXIBLE"
                                 },
                                 {
@@ -314,46 +309,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* NOT A FIT IF */}
-                <section className="py-24 px-6 md:px-8 lg:px-20 bg-surface-container-lowest border-b border-white/5 relative z-10">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                            >
-                                <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#F7931A] mb-4 block font-bold">Honesty</span>
-                                <h2 className="font-syne text-4xl md:text-5xl font-extrabold tight-tracked text-white uppercase mb-6">We&apos;re Probably<br/> Not a Fit If&hellip;</h2>
-                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">
-                                    I&apos;d rather be upfront than waste both our time. If any of these sound familiar, I&apos;m probably not the right person for this project.
-                                </p>
-                            </motion.div>
-                            <div className="space-y-3">
-                                {[
-                                    "You're optimising for the lowest price",
-                                    "You want a quick fix with no thought for what comes next",
-                                    "The brief changes every few days",
-                                    "You need a large team — I work best on focused, high-impact projects",
-                                    "You expect results without being available for input or feedback"
-                                ].map((item, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: i * 0.08 }}
-                                        className="flex items-center gap-4 glass p-4"
-                                    >
-                                        <span className="material-symbols-outlined text-white/20 text-base flex-shrink-0">close</span>
-                                        <p className="font-mono text-sm text-on-surface-variant">{item}</p>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* WHY WORK WITH ME */}
                 <section className="py-32 px-6 md:px-8 lg:px-20 bg-surface-container-lowest border-b border-white/5 relative z-10">
                     <div className="max-w-7xl mx-auto">
@@ -406,6 +361,14 @@ export default function Home() {
                                 </motion.div>
                             ))}
                         </div>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="font-mono text-sm text-on-surface-variant mt-10 border-l-2 border-[#F7931A] pl-6"
+                        >
+                            I build both web and mobile apps — so your product works everywhere your users are.
+                        </motion.p>
                     </div>
                 </section>
 
@@ -679,10 +642,6 @@ export default function Home() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="flex items-center justify-center gap-3 mb-8">
-                                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse"></span>
-                                <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400 font-bold">Available for Freelance &amp; Contract Work</span>
-                            </div>
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase mb-8">
                                 Got a problem worth solving<br className="hidden md:block"/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]"> — or something that&apos;s already breaking?</span>

@@ -93,24 +93,24 @@ export const ContactForm = () => {
             </div>
 
             {state === "success" && (
-                <div className="flex items-center gap-3 font-mono text-sm text-emerald-400 border border-emerald-400/20 px-4 py-3 bg-emerald-400/5">
-                    <span className="material-symbols-outlined text-base">check_circle</span>
-                    Message received. I&apos;ll get back to you within 24 hours.
+                <div className="flex items-start gap-3 font-mono text-sm text-emerald-400 border border-emerald-400/20 px-4 py-3 bg-emerald-400/5">
+                    <span className="material-symbols-outlined text-base shrink-0 mt-0.5">check_circle</span>
+                    <span>Message received. I&apos;ll get back to you within 24 hours.</span>
                 </div>
             )}
 
             {state === "error" && (
-                <div className="flex items-center gap-3 font-mono text-sm text-red-400 border border-red-400/20 px-4 py-3 bg-red-400/5">
-                    <span className="material-symbols-outlined text-base">error</span>
-                    Something went wrong. Email me directly at{" "}
-                    <a href="mailto:yashbtc@proton.me" className="underline">yashbtc@proton.me</a>
+                <div className="flex items-start gap-3 font-mono text-sm text-red-400 border border-red-400/20 px-4 py-3 bg-red-400/5">
+                    <span className="material-symbols-outlined text-base shrink-0 mt-0.5">error</span>
+                    <span>Something went wrong. Email me directly at{" "}
+                    <a href="mailto:yashbtc@proton.me" className="underline break-all">yashbtc@proton.me</a></span>
                 </div>
             )}
 
             <button
                 type="submit"
                 disabled={state === "sending" || state === "success"}
-                className="w-full bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-6 sm:px-8 py-4 font-mono font-bold uppercase tracking-wider sm:tracking-widest text-sm flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {state === "sending" ? (
                     <>Sending...</>

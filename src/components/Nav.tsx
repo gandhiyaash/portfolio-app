@@ -24,10 +24,10 @@ export const Nav = () => {
             className={`fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-8 max-w-full border-b transition-all duration-300 ${scrolled ? "bg-[#0A0A0A]/95 backdrop-blur-2xl border-white/8 py-3 shadow-[0_1px_20px_rgba(0,0,0,0.5)]" : "glass-dark border-white/5 py-4"}`}
         >
             <Link href="/" className="flex items-center gap-3 group">
-                <span className="w-2 h-2 bg-[#F7931A] rounded-full animate-pulse shadow-[0_0_8px_#F7931A]"></span>
+                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_#34d399]"></span>
                 <div className="flex flex-col">
                     <span className="text-xl font-bold tracking-tighter text-white font-syne uppercase leading-none group-hover:text-[#F7931A] transition-colors">Yash Gandhi</span>
-                    <span className="text-[9px] font-mono text-[#F7931A] uppercase tracking-[0.2em] leading-tight opacity-80">Full-Stack Engineer</span>
+                    <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-[0.2em] leading-tight opacity-80">Full-Stack Engineer</span>
                 </div>
             </Link>
             <div className="hidden md:flex items-center gap-8">

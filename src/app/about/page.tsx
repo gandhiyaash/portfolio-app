@@ -166,7 +166,7 @@ export default function About() {
                         Describe what you&apos;re building and I&apos;ll get back within 24 hours. No sales call, no fluff — just a straight answer on whether and how I can help.
                     </p>
 
-                    <div className="glass p-8 md:p-12">
+                    <div className="glass p-5 sm:p-8 md:p-12">
                         <ContactForm />
                     </div>
 
