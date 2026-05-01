@@ -81,7 +81,7 @@ export const ContactForm = () => {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="Jane Smith"
-                        className="w-full bg-surface-container-high border border-white/10 focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white placeholder-white/20 transition-colors"
+                        className="w-full bg-surface-container-high border border-white/10 hover:border-emerald-400 hover:shadow-[0_0_14px_rgba(52,211,153,0.35)] focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white placeholder-white/20 transition-all duration-200"
                     />
                 </div>
                 <div>
@@ -93,7 +93,7 @@ export const ContactForm = () => {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="jane@company.com"
-                        className="w-full bg-surface-container-high border border-white/10 focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white placeholder-white/20 transition-colors"
+                        className="w-full bg-surface-container-high border border-white/10 hover:border-emerald-400 hover:shadow-[0_0_14px_rgba(52,211,153,0.35)] focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white placeholder-white/20 transition-all duration-200"
                     />
                 </div>
             </div>
@@ -104,7 +104,7 @@ export const ContactForm = () => {
                     name="budget"
                     value={form.budget}
                     onChange={handleChange}
-                    className="w-full bg-surface-container-high border border-white/10 focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white transition-colors appearance-none"
+                    className="w-full bg-surface-container-high border border-white/10 hover:border-emerald-400 hover:shadow-[0_0_14px_rgba(52,211,153,0.35)] focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white transition-all duration-200 appearance-none"
                 >
                     <option value="" className="bg-[#0A0A0A]">Select a range...</option>
                     <option value="under-5k" className="bg-[#0A0A0A]">Under $5,000</option>
@@ -124,7 +124,7 @@ export const ContactForm = () => {
                     onChange={handleChange}
                     rows={5}
                     placeholder="What are you building? What problem are you solving? What's your timeline?"
-                    className="w-full bg-surface-container-high border border-white/10 focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white placeholder-white/20 transition-colors resize-none"
+                    className="w-full bg-surface-container-high border border-white/10 hover:border-emerald-400 hover:shadow-[0_0_14px_rgba(52,211,153,0.35)] focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white placeholder-white/20 transition-all duration-200 resize-none"
                 />
             </div>
 
