@@ -19,18 +19,18 @@ export default function Home() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="text-left"
                         >
-                            <h1 className="font-syne text-[clamp(1.75rem,9vw,3rem)] md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
+                            <h1 className="font-syne text-5xl md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
                                 I build scalable React apps<br className="hidden md:block"/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">&amp; dashboards that don&apos;t break as you grow.</span>
                             </h1>
-                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
+                            <p className="font-mono text-base md:text-lg text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
                                 Full-Stack Engineer focused on React, React Native (Expo), Node.js, and production systems that scale under real-world load. Built for real users from day one, not just a demo.
                             </p>
-                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
+                            <p className="font-mono text-sm text-white/50 max-w-xl mb-4 pl-6 leading-relaxed">
                                 Built and deployed systems handling real users, real transactions, and real operational workflows.
                             </p>
                             <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
-                                Enterprise rigour from Barclays. Startup speed from ground-up builds.
+                                <span className="text-white opacity-80">Enterprise rigour from Barclays. Startup speed from ground-up builds.</span>
                             </p>
                             <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-2 pl-6 leading-relaxed">
                                 Most clients come to me after something breaks. I help you build it right the first time.

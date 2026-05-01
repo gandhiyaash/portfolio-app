@@ -27,7 +27,7 @@ export const CaseStudyLayout = (props: CaseStudyProps) => {
                         <span className="material-symbols-outlined text-sm">arrow_back</span>
                         Back to Systems
                     </Link>
-                    <h1 className="font-syne text-[clamp(1.75rem,9vw,3rem)] md:text-7xl font-extrabold tight-tracked mb-6 uppercase">{props.title}</h1>
+                    <h1 className="font-syne text-5xl md:text-7xl font-extrabold tight-tracked mb-6 uppercase">{props.title}</h1>
                     <p className="text-xl md:text-2xl text-on-surface-variant max-w-3xl mb-8 leading-relaxed">{props.subtitle}</p>
                     <div className="flex flex-wrap gap-4 mb-8">
                         {props.tags.map(tag => (

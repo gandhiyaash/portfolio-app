@@ -126,11 +126,11 @@ export default function About() {
                     className="scroll-mt-24"
                 >
                     {/* Marketing Hero Header */}
-                    <div className="text-center py-20 px-4">
-                        <h2 className="font-syne text-[clamp(1.75rem,9vw,3rem)] md:text-7xl font-extrabold uppercase leading-[1.05] text-white mb-2">
+                    <div className="text-center py-20 px-6">
+                        <h2 className="font-syne text-[clamp(1.5rem,6.5vw,3rem)] md:text-7xl font-extrabold tight-tracked uppercase leading-[1.05] text-white mb-2">
                             Got a problem<br />worth solving
                         </h2>
-                        <h2 className="font-syne text-[clamp(1.75rem,9vw,3rem)] md:text-7xl font-extrabold uppercase leading-[1.05] text-[#F7931A] mb-8">
+                        <h2 className="font-syne text-[clamp(1.5rem,6.5vw,3rem)] md:text-7xl font-extrabold tight-tracked uppercase leading-[1.05] text-[#F7931A] mb-8">
                             or something<br />that&apos;s already breaking?
                         </h2>
                         <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-10 leading-relaxed">
