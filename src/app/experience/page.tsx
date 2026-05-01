@@ -21,7 +21,7 @@ export default function Experience() {
                     animate={{ opacity: 1, y: 0 }}
                     className="space-y-4 mb-16 text-center"
                 >
-                    <h1 className="font-syne text-5xl md:text-7xl font-extrabold tracking-tighter uppercase text-white">Experience</h1>
+                    <h1 className="font-syne text-4xl md:text-7xl font-extrabold tracking-tighter uppercase text-white">Experience</h1>
                     <p className="text-on-surface-variant text-sm md:text-base font-mono opacity-80 uppercase tracking-widest">Architectural timeline</p>
                 </motion.header>
 
@@ -84,10 +84,10 @@ export default function Experience() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 text-center space-y-8 glass p-16"
+                    className="mt-32 text-center space-y-8 glass p-8 md:p-16 overflow-hidden"
                 >
 
-                    <h3 className="font-syne text-4xl md:text-6xl font-extrabold uppercase tracking-tighter text-white max-w-2xl mx-auto leading-[1.1]">
+                    <h3 className="font-syne text-3xl md:text-6xl font-extrabold uppercase tracking-tighter text-white max-w-2xl mx-auto leading-[1.1]">
                         Let's architect your next <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">product</span>
                     </h3>
                     <Link href="/about#contact" className="inline-block bg-gradient-to-r from-[#F7931A] to-[#FFB874] text-[#4b2800] font-mono font-bold px-12 py-5 uppercase text-sm tracking-widest hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all active:scale-95 mt-4">

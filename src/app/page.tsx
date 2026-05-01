@@ -19,7 +19,7 @@ export default function Home() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="text-left"
                         >
-                            <h1 className="font-syne text-5xl md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
+                            <h1 className="font-syne text-4xl md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
                                 I build scalable React apps<br className="hidden md:block"/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">&amp; dashboards that don&apos;t break as you grow.</span>
                             </h1>
