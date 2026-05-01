@@ -35,9 +35,9 @@ export const ContactForm = () => {
     };
 
     const steps = [
-        { step: "01", title: "Message Received", description: "Your message is in my inbox. I read every one personally — no automated replies." },
+        { step: "01", title: "Message Received", description: "Your message is in my inbox. I read every one personally. No automated replies." },
         { step: "02", title: "30-Minute Call", description: "I'll reach out within 24 hours to schedule a quick call to understand what you're building." },
-        { step: "03", title: "Clear Plan + Timeline", description: "I give you a concrete scope and honest feedback — before any commitment." },
+        { step: "03", title: "Clear Plan + Timeline", description: "I give you a concrete scope and honest feedback before any commitment." },
         { step: "04", title: "We Start Building", description: "Once we're aligned, we move fast. No delays, no hand-holding required." }
     ];
 

@@ -8,7 +8,7 @@ export default function KapsCaseStudy() {
             subtitle="Enterprise-grade logistics & mobility dashboard. Architected the control plane for a multi-city, multi-service operations platform."
             tags={["React 19", "TypeScript", "RTK Query", "Java 21", "PostgreSQL", "Terraform"]}
             role="Lead Frontend Engineer & Backend Contributor"
-            problem={`The client needed to scale operations across multiple Indian cities with 5+ service verticals (Cabs, Goods, Cranes, Handyman). Pricing was hyper-dynamic—varying by city, vehicle, service type, time of day, and distance. The challenge was building an admin control plane that managed this exponential complexity while ensuring lower-tier admins couldn't accidentally destroy configuration data.`}
+            problem={`The client needed to scale operations across multiple Indian cities with 5+ service verticals (Cabs, Goods, Cranes, Handyman). Pricing was hyper-dynamic, varying by city, vehicle, service type, time of day, and distance. The challenge was building an admin control plane that managed this exponential complexity while ensuring lower-tier admins couldn't accidentally destroy configuration data.`}
             constraints={[
                 "Multi-dimensional pricing configuration without combinatorial explosion.",
                 "Granular two-tier access control (Super Admin vs. Admin) to prevent accidental data loss.",

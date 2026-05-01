@@ -60,10 +60,10 @@ export default function About() {
                                 My background straddles two worlds: enterprise-grade engineering discipline from Barclays, and the scrappy, ship-fast velocity required to build products from zero. That combination means I can architect systems that are both reliable and fast to build.
                             </p>
                             <p className="font-mono text-sm text-on-surface-variant leading-relaxed">
-                                I&apos;ve built 4-sided marketplaces, real-time queue systems, multi-city logistics dashboards, and payment automation pipelines — each one designed to be maintainable and extensible, not just demo-ready.
+                                I&apos;ve built 4-sided marketplaces, real-time queue systems, multi-city logistics dashboards, and payment automation pipelines. Each one designed to be maintainable and extensible, not just demo-ready.
                             </p>
                             <p className="font-mono text-sm text-on-surface-variant leading-relaxed">
-                                If you&apos;re a founder who needs someone who can own the technical side end-to-end — from architecture decisions to deployment — I&apos;m the right person.
+                                If you&apos;re a founder who needs someone who can own the technical side end-to-end, from architecture decisions to deployment, I&apos;m the right person.
                             </p>
                         </div>
                     </div>
@@ -134,7 +134,7 @@ export default function About() {
                             or something<br />that&apos;s already breaking?
                         </h2>
                         <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-10 leading-relaxed">
-                            Tell me what you&apos;re building — and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
+                            Tell me what you&apos;re building and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
                         </p>
                         <a
                             href="#contact-form"

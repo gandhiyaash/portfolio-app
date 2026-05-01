@@ -19,24 +19,21 @@ export default function Home() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="text-left"
                         >
-                            <h1 className="font-syne text-5xl md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
+                            <h1 className="font-syne text-[clamp(1.75rem,9vw,3rem)] md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
                                 I build scalable React apps<br className="hidden md:block"/>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">&amp; dashboards that don&apos;t break as you grow.</span>
                             </h1>
-                            <p className="font-mono text-base md:text-lg text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
-                                Full-Stack Engineer focused on React, React Native (Expo), Node.js, and production systems that scale under real-world load — built for real users from day one, not just a demo.
+                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
+                                Full-Stack Engineer focused on React, React Native (Expo), Node.js, and production systems that scale under real-world load. Built for real users from day one, not just a demo.
                             </p>
-                            <p className="font-mono text-sm text-white/50 max-w-xl mb-4 pl-6 leading-relaxed">
+                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
                                 Built and deployed systems handling real users, real transactions, and real operational workflows.
                             </p>
                             <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
-                                <span className="text-white opacity-80">Enterprise rigour from Barclays. Startup speed from ground-up builds.</span>
+                                Enterprise rigour from Barclays. Startup speed from ground-up builds.
                             </p>
                             <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-2 pl-6 leading-relaxed">
                                 Most clients come to me after something breaks. I help you build it right the first time.
-                            </p>
-                            <p className="font-mono text-xs text-white/40 max-w-xl mb-12 pl-6 leading-relaxed">
-                                Most of my work comes from referrals — I only take on a few new projects each month.
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap gap-6">
                                 <Link href="/experience" className="bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-300 active:scale-95 group">
@@ -76,28 +73,28 @@ export default function Home() {
                                 {
                                     icon: "rocket_launch",
                                     title: "MVP Development",
-                                    description: "From idea → production-ready in 6–12 weeks. Built to scale from day one — not something you'll need to rebuild in 3 months.",
+                                    description: "From idea → production-ready in 6–12 weeks. Built to scale from day one, not something you'll need to rebuild in 3 months.",
                                     items: ["Scoping & architecture planning", "React / Next.js frontend", "Node.js backend & APIs", "AWS deployment & CI/CD"],
                                     tag: "6–12 WEEKS"
                                 },
                                 {
                                     icon: "grid_view",
                                     title: "Dashboards & Internal Tools",
-                                    description: "Replace spreadsheets and manual chaos with a dashboard your team actually uses. Cut hours of weekly admin — without adding headcount.",
+                                    description: "Replace spreadsheets and manual chaos with a dashboard your team actually uses. Cut hours of weekly admin without adding headcount.",
                                     items: ["Data visualisation & reporting", "Role-based access & permissions", "Real-time data updates", "Integrations with existing tools"],
                                     tag: "2–6 WEEKS"
                                 },
                                 {
                                     icon: "developer_board",
                                     title: "Web & Mobile Apps (React + React Native)",
-                                    description: "Fast, responsive, and cross-platform. Web apps and native mobile experiences built on the same codebase — clean code, real Core Web Vitals scores, and a codebase your team can maintain.",
+                                    description: "Fast, responsive, and cross-platform. Web apps and native mobile experiences built on the same codebase. Clean code, real Core Web Vitals scores, and a codebase your team can maintain.",
                                     items: ["React / Next.js development", "React Native (Expo)", "Cross-platform mobile apps", "TypeScript & modern stack", "Performance optimisation", "SEO & Core Web Vitals"],
                                     tag: "FLEXIBLE"
                                 },
                                 {
                                     icon: "sync",
                                     title: "Real-Time Systems",
-                                    description: "WebSocket queues, live feeds, real-time notifications. Built for traffic spikes, load-tested before launch — not just in local dev.",
+                                    description: "WebSocket queues, live feeds, real-time notifications. Built for traffic spikes, load-tested before launch, not just in local dev.",
                                     items: ["WebSocket & Socket.io", "Redis pub/sub & queues", "Scalable event-driven design", "Load-tested before launch"],
                                     tag: "SPECIALITY"
                                 },
@@ -151,7 +148,7 @@ export default function Home() {
                             className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 glass p-6"
                         >
                             <p className="font-mono text-sm text-on-surface-variant">
-                                Not sure what you need? <span className="text-white">Let&apos;s talk through your project</span> — no commitment, 30 minutes.
+                                Not sure what you need? <span className="text-white">Let&apos;s talk through your project</span>. No commitment, 30 minutes.
                             </p>
                             <Link href="/about#contact" className="font-mono text-xs font-bold uppercase tracking-widest text-[#F7931A] border border-[#F7931A]/30 px-6 py-3 hover:bg-[#22C55E]/10 transition-all duration-200 whitespace-nowrap flex items-center gap-2">
                                 Book a Discovery Call
@@ -178,13 +175,13 @@ export default function Home() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
                                 {
-                                    quote: "Platform was live in 10 weeks. Ordering, queue management, payouts — all working day one. Didn't have to chase him once. Things just got done.",
+                                    quote: "Platform was live in 10 weeks. Ordering, queue management, payouts, all working day one. Didn't have to chase him once. Things just got done.",
                                     name: "Founder, Sipstr",
                                     role: "",
                                     placeholder: true
                                 },
                                 {
-                                    quote: "5 service types, multiple cities, pricing that changed by the hour. Yash built something that handled all of it — and set it up so our team could keep going without him.",
+                                    quote: "5 service types, multiple cities, pricing that changed by the hour. Yash built something that handled all of it and set it up so our team could keep going without him.",
                                     name: "Founder, KAPS",
                                     role: "",
                                     placeholder: true
@@ -202,7 +199,7 @@ export default function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="glass p-8 flex flex-col gap-6 relative"
+                                    className="glass p-8 flex flex-col gap-6 relative hover:border-[#22C55E]/20 transition-all duration-300"
                                 >
                                     <span className="font-syne text-5xl text-[#F7931A]/20 leading-none select-none absolute top-4 left-6">&ldquo;</span>
                                     <p className="font-mono text-sm text-on-surface-variant leading-relaxed pt-6 italic">{t.quote}</p>
@@ -234,17 +231,17 @@ export default function Home() {
                                 {
                                     icon: "rocket_launch",
                                     title: "Startup Founders",
-                                    description: "You have an idea or early traction and need someone who can own the technical side end-to-end — architecture, development, and deployment — without hand-holding."
+                                    description: "You have an idea or early traction and need someone who can own the technical side end-to-end: architecture, development, and deployment. No hand-holding."
                                 },
                                 {
                                     icon: "trending_up",
                                     title: "Teams Scaling Beyond MVP",
-                                    description: "Your MVP worked. Now it's struggling under real load. I help you fix what breaks, rebuild what doesn't scale, and add what's next — without starting from scratch."
+                                    description: "Your MVP worked. Now it's struggling under real load. I help you fix what breaks, rebuild what doesn't scale, and add what's next without starting from scratch."
                                 },
                                 {
                                     icon: "swap_horiz",
                                     title: "Businesses Replacing Manual Processes",
-                                    description: "You're running operations on spreadsheets or manual workflows. I build the dashboards and internal tools that replace the chaos — saving hours every week and eliminating human error."
+                                    description: "You're running operations on spreadsheets or manual workflows. I build the dashboards and internal tools that replace the chaos, saving hours every week and eliminating human error."
                                 },
                                 {
                                     icon: "workspace_premium",
@@ -297,17 +294,17 @@ export default function Home() {
                                 {
                                     step: "02",
                                     title: "Propose a Solution",
-                                    description: "Clear scope. Realistic timeline. Tech that fits your stage — not the most impressive stack, the most appropriate one."
+                                    description: "Clear scope. Realistic timeline. Tech that fits your stage, not the most impressive stack, the most appropriate one."
                                 },
                                 {
                                     step: "03",
                                     title: "Build With Updates",
-                                    description: "You see real progress every week. No black boxes. If something changes, we adapt early — not after six weeks of wasted work."
+                                    description: "You see real progress every week. No black boxes. If something changes, we adapt early, not after six weeks of wasted work."
                                 },
                                 {
                                     step: "04",
                                     title: "Deliver Production-Ready",
-                                    description: "Deployed, tested, and documented. Built so your team can own it after handoff — not dependent on me to keep the lights on."
+                                    description: "Deployed, tested, and documented. Built so your team can own it after handoff, not dependent on me to keep the lights on."
                                 }
                             ].map((item, i) => (
                                 <motion.div
@@ -345,12 +342,12 @@ export default function Home() {
                                 {
                                     icon: "verified",
                                     title: "Enterprise + Startup Experience",
-                                    description: "I've worked inside Barclays where reliability isn't optional — and I've built products from scratch for startups. That combination means you get systems that are both solid and fast to ship."
+                                    description: "I've worked inside Barclays where reliability isn't optional, and I've built products from scratch for startups. That combination means you get systems that are both solid and fast to ship."
                                 },
                                 {
                                     icon: "deployed_code",
                                     title: "Production Systems, Not Prototypes",
-                                    description: "Every project I've worked on is live and handling real users. I don't build demos. I build things that have to work — under load, under pressure, on day one."
+                                    description: "Every project I've worked on is live and handling real users. I don't build demos. I build things that have to work: under load, under pressure, on day one."
                                 },
                                 {
                                     icon: "trending_up",
@@ -360,7 +357,7 @@ export default function Home() {
                                 {
                                     icon: "manage_accounts",
                                     title: "End-to-End Ownership",
-                                    description: "I take full ownership from architecture and development through to deployment and documentation. You get one person who understands the whole system — not a contractor who ships code and disappears."
+                                    description: "I take full ownership from architecture and development through to deployment and documentation. You get one person who understands the whole system, not a contractor who ships code and disappears."
                                 }
                             ].map((item, i) => (
                                 <motion.div
@@ -385,7 +382,7 @@ export default function Home() {
                             viewport={{ once: true }}
                             className="font-mono text-sm text-on-surface-variant mt-10 border-l-2 border-[#F7931A] pl-6"
                         >
-                            I build both web and mobile apps — so your product works everywhere your users are.
+                            I build both web and mobile apps, so your product works everywhere your users are.
                         </motion.p>
                     </div>
                 </section>
@@ -427,7 +424,7 @@ export default function Home() {
                                             </div>
                                             <div>
                                                 <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Solution</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a real-time ordering and queue management app — customers order from their phone, staff manage the queue live on a shared dashboard.</p>
+                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a real-time ordering and queue management app. Customers order from their phone, staff manage the queue live on a shared dashboard.</p>
                                             </div>
                                             <div>
                                                 <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Outcome</span>
@@ -507,11 +504,11 @@ export default function Home() {
                                             <div className="space-y-5 mb-10 max-w-lg">
                                                 <div>
                                                     <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Problem</span>
-                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Bitcoin meetup organisers had no reliable way to guarantee attendance — no-shows were wasting everyone&apos;s time and effort.</p>
+                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Bitcoin meetup organisers had no reliable way to guarantee attendance. No-shows were wasting everyone&apos;s time and effort.</p>
                                                 </div>
                                                 <div>
                                                     <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Solution</span>
-                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a platform where attendees put up a small Bitcoin Lightning deposit to confirm their seat — automatically refunded when they show up.</p>
+                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a platform where attendees put up a small Bitcoin Lightning deposit to confirm their seat, automatically refunded when they show up.</p>
                                                 </div>
                                                 <div>
                                                     <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Outcome</span>
@@ -552,7 +549,7 @@ export default function Home() {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]"> or something that&apos;s already breaking?</span>
                             </h2>
                             <p className="font-mono text-base text-on-surface-variant max-w-2xl mx-auto mb-4 leading-relaxed">
-                                Tell me what you&apos;re building — and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
+                                Tell me what you&apos;re building and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
                             </p>
                             <Link href="/about#contact" className="inline-flex items-center gap-4 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-10 py-5 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all duration-300 active:scale-95 group text-base mt-8 mx-auto">
                                 Start a Project
