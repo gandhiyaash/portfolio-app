@@ -23,14 +23,6 @@ const PROJECTS = [
         link: "#"
     },
     {
-        id: "bitmeet",
-        title: "BitMeet",
-        desc: "A Bitcoin-native meetup platform utilizing Lightning Network for micro-staking event attendance.",
-        tags: ["LND Node", "Go", "Web3.js"],
-        icon: "bolt",
-        link: "#"
-    },
-    {
         id: "satmatch",
         title: "Satmatch",
         desc: "Spatial data analysis engine for satellite imagery matching and tracking.",

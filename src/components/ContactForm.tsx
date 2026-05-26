@@ -72,6 +72,25 @@ export const ContactForm = () => {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Book a call — primary CTA */}
+            <div>
+                <a
+                    href="https://calendly.com/letyashknow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-3 border border-[#F7931A]/40 text-[#F7931A] px-6 py-4 font-mono font-bold uppercase tracking-widest hover:bg-[#F7931A]/5 hover:border-[#F7931A] transition-all duration-200 group"
+                >
+                    <span className="material-symbols-outlined text-base">calendar_month</span>
+                    Book a Free 30-Min Discovery Call
+                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <div className="flex items-center gap-4 mt-6">
+                    <div className="flex-1 h-px bg-white/10" />
+                    <span className="font-mono text-[10px] text-white/30 uppercase tracking-widest">or send a message below</span>
+                    <div className="flex-1 h-px bg-white/10" />
+                </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="font-mono text-[10px] uppercase tracking-widest text-white/50 block mb-2">Your Name</label>
@@ -107,11 +126,11 @@ export const ContactForm = () => {
                     className="w-full bg-surface-container-high border border-white/10 hover:border-emerald-400 hover:shadow-[0_0_14px_rgba(52,211,153,0.35)] focus:border-[#F7931A] outline-none px-4 py-3 font-mono text-sm text-white transition-all duration-200 appearance-none"
                 >
                     <option value="" className="bg-[#0A0A0A]">Select a range...</option>
-                    <option value="under-5k" className="bg-[#0A0A0A]">Under $5,000</option>
                     <option value="5k-15k" className="bg-[#0A0A0A]">$5,000 – $15,000</option>
                     <option value="15k-30k" className="bg-[#0A0A0A]">$15,000 – $30,000</option>
-                    <option value="30k-plus" className="bg-[#0A0A0A]">$30,000+</option>
-                    <option value="retainer" className="bg-[#0A0A0A]">Monthly retainer</option>
+                    <option value="30k-60k" className="bg-[#0A0A0A]">$30,000 – $60,000</option>
+                    <option value="60k-plus" className="bg-[#0A0A0A]">$60,000+</option>
+                    <option value="retainer" className="bg-[#0A0A0A]">Monthly retainer (let&apos;s discuss)</option>
                 </select>
             </div>
 

@@ -35,7 +35,7 @@ export default function SipstrCaseStudy() {
                 { title: "O(1) Tax Engine", desc: "Cached complex per-state/category tax rules at startup, entirely removing database bottlenecks during high-volume checkout bursts." },
                 { title: "Idempotent Webhooks", desc: "Designed a dual-layer deduplication system (in-memory + DB) to guarantee financial safety and prevent double-payouts during Stripe network retries." }
             ]}
-            impact="40% reduced wait times. Zero manual overhead for payouts. Enterprise reliability at startup speed."
+            impact="~40% reduction in peak wait times — more throughput during the highest-margin hours. Payout reconciliation fully automated: zero manual overhead, zero disputes. Delivered in 10 weeks from first call to production."
         />
     );
 }

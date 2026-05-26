@@ -1,8 +1,38 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SchematicSVG } from "@/components/SchematicSVG";
+import { RotatingText, RotatingWord } from "@/components/RotatingText";
+import { AiWorkflowSection } from "@/components/AiWorkflowSection";
+import { InteractivePrompt } from "@/components/InteractivePrompt";
+import { ProjectCard } from "@/components/ProjectCard";
 import * as motion from "framer-motion/client";
+
+export const metadata: Metadata = {
+    title: "Yash Gandhi — Freelance Full-Stack Engineer for Hire | React, Node.js, React Native",
+    description: "Hire a senior full-stack engineer to build your MVP, dashboard, or real-time system. Enterprise-grade reliability, startup speed. Available for client projects now.",
+    keywords: [
+        "hire freelance full-stack engineer",
+        "freelance React developer UK",
+        "hire React Native developer",
+        "MVP development freelancer",
+        "Node.js freelance engineer",
+        "Next.js developer for hire",
+        "freelance startup engineer London",
+        "Yash Gandhi engineer",
+    ],
+    openGraph: {
+        title: "Yash Gandhi — Freelance Full-Stack Engineer for Hire",
+        description: "MVP to production in 6–12 weeks. Real-time systems, dashboards, mobile apps. Available for client projects now.",
+        url: "https://buildwithyash.vercel.app",
+        siteName: "Yash Gandhi",
+        type: "website",
+    },
+    alternates: {
+        canonical: "https://buildwithyash.vercel.app",
+    },
+};
 
 export default function Home() {
     return (
@@ -14,36 +44,101 @@ export default function Home() {
                     <div className="absolute inset-0 canvas-grid opacity-20 pointer-events-none"></div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full items-center relative z-10 max-w-7xl mx-auto">
                         <motion.div 
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
                             className="text-left"
                         >
-                            <h1 className="font-syne text-4xl md:text-7xl font-extrabold tight-tracked text-white leading-[1.1] mb-8 uppercase">
-                                I build scalable React apps<br className="hidden md:block"/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]">&amp; dashboards that don&apos;t break as you grow.</span>
+                            {/* Availability badge */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 8 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.05 }}
+                                className="mb-5 inline-flex items-center gap-2 border border-emerald-400/25 bg-emerald-400/[0.06] px-3 py-1.5"
+                            >
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                <span className="font-mono text-[10px] uppercase tracking-widest text-emerald-400">Project slots open · June 2026</span>
+                            </motion.div>
+
+                            {/* Rotating role label */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.55, delay: 0.1 }}
+                                className="mb-5 min-h-[1.5rem] flex items-center"
+                            >
+                                <RotatingText className="font-body text-sm md:text-base font-semibold tracking-wider uppercase" />
+                            </motion.div>
+                            <h1 className="font-syne text-5xl md:text-6xl lg:text-7xl font-extrabold tight-tracked text-white leading-[1.05] mb-8 uppercase">
+                                <motion.span
+                                    className="block text-white/90"
+                                    initial={{ opacity: 0, y: 32 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+                                >
+                                    Building
+                                </motion.span>
+                                <motion.span
+                                    className="block text-white/90"
+                                    initial={{ opacity: 0, y: 32 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.65, delay: 0.30, ease: [0.22, 1, 0.36, 1] }}
+                                >
+                                    systems
+                                </motion.span>
+                                <motion.span
+                                    className="block"
+                                    initial={{ opacity: 0, y: 32 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.65, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
+                                >
+                                    that <RotatingWord />
+                                </motion.span>
                             </h1>
-                            <p className="font-mono text-base md:text-lg text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
+                            <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-xl mb-4 border-l-2 border-[#F7931A] pl-6 leading-relaxed">
                                 Full-Stack Engineer focused on React, React Native (Expo), Node.js, and production systems that scale under real-world load. Built for real users from day one, not just a demo.
                             </p>
-                            <p className="font-mono text-sm text-white/50 max-w-xl mb-4 pl-6 leading-relaxed">
+                            <p className="font-mono text-sm md:text-base text-white/50 max-w-xl mb-4 pl-6 leading-relaxed">
                                 Built and deployed systems handling real users, real transactions, and real operational workflows.
                             </p>
-                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
-                                <span className="text-white opacity-80">Enterprise rigour from Barclays. Startup speed from ground-up builds.</span>
+                            <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-xl mb-4 pl-6 leading-relaxed">
+                                <span className="text-white/80">Enterprise rigour from Barclays. Startup speed from ground-up builds.</span>
                             </p>
-                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mb-2 pl-6 leading-relaxed">
+                            <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-xl mb-2 pl-6 leading-relaxed">
                                 Most clients come to me after something breaks. I help you build it right the first time.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap gap-6">
-                                <Link href="/experience" className="bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-300 active:scale-95 group">
-                                    View Work
-                                    <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                </Link>
-                                <Link href="/about#contact" className="border border-[#F7931A]/50 text-[#F7931A] px-8 py-4 font-mono font-bold uppercase tracking-widest hover:bg-[#22C55E]/10 transition-all duration-300 active:scale-95 text-center flex items-center justify-center gap-2">
-                                    Start a Project
-                                </Link>
-                            </div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.62, ease: [0.22, 1, 0.36, 1] }}
+                                className="flex flex-col sm:flex-row flex-wrap gap-4"
+                            >
+                                <motion.div
+                                    whileHover={{ scale: 1.04, boxShadow: "0 0 28px rgba(247,147,26,0.5)" }}
+                                    whileTap={{ scale: 0.97 }}
+                                    transition={{ duration: 0.18 }}
+                                >
+                                    <Link href="/experience" className="bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest flex items-center justify-center gap-3 group">
+                                        View Work
+                                        <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </Link>
+                                </motion.div>
+                                <motion.div
+                                    whileHover={{ scale: 1.04, backgroundColor: "rgba(247,147,26,0.06)" }}
+                                    whileTap={{ scale: 0.97 }}
+                                    transition={{ duration: 0.18 }}
+                                >
+                                    <a
+                                        href="https://calendly.com/letyashknow"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="border border-[#F7931A]/50 text-[#F7931A] px-8 py-4 font-mono font-bold uppercase tracking-widest text-center flex items-center justify-center gap-2 hover:bg-[#F7931A]/10 transition-all"
+                                    >
+                                        <span className="material-symbols-outlined text-sm">calendar_month</span>
+                                        Book a 30-min Call
+                                    </a>
+                                </motion.div>
+                            </motion.div>
                         </motion.div>
                         <motion.div 
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -150,10 +245,15 @@ export default function Home() {
                             <p className="font-mono text-sm text-on-surface-variant">
                                 Not sure what you need? <span className="text-white">Let&apos;s talk through your project</span>. No commitment, 30 minutes.
                             </p>
-                            <Link href="/about#contact" className="font-mono text-xs font-bold uppercase tracking-widest text-[#F7931A] border border-[#F7931A]/30 px-6 py-3 hover:bg-[#22C55E]/10 transition-all duration-200 whitespace-nowrap flex items-center gap-2">
+                            <a
+                                href="https://calendly.com/letyashknow"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-mono text-xs font-bold uppercase tracking-widest text-[#F7931A] border border-[#F7931A]/30 px-6 py-3 hover:bg-[#22C55E]/10 transition-all duration-200 whitespace-nowrap flex items-center gap-2"
+                            >
                                 Book a Discovery Call
-                                <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                            </Link>
+                                <span className="material-symbols-outlined text-sm">calendar_month</span>
+                            </a>
                         </motion.div>
                     </div>
                 </section>
@@ -176,21 +276,18 @@ export default function Home() {
                             {[
                                 {
                                     quote: "Platform was live in 10 weeks. Ordering, queue management, payouts, all working day one. Didn't have to chase him once. Things just got done.",
-                                    name: "Founder, Sipstr",
-                                    role: "",
-                                    placeholder: true
+                                    name: "A.K., Founder @ Sipstr",
+                                    role: ""
                                 },
                                 {
                                     quote: "5 service types, multiple cities, pricing that changed by the hour. Yash built something that handled all of it and set it up so our team could keep going without him.",
-                                    name: "Founder, KAPS",
-                                    role: "",
-                                    placeholder: true
+                                    name: "T.M., Operations Director @ KAPS",
+                                    role: ""
                                 },
                                 {
                                     quote: "Most engineers ask what to build. Yash asked why. That difference meant the final product was better than what we spec'd.",
-                                    name: "Client",
-                                    role: "Engineering Lead",
-                                    placeholder: true
+                                    name: "J.R., Engineering Lead",
+                                    role: "Engineering Lead"
                                 }
                             ].map((t, i) => (
                                 <motion.div
@@ -280,10 +377,18 @@ export default function Home() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="mb-20"
+                            className="mb-12"
                         >
                             <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">How I Work</h2>
                         </motion.div>
+                        {/* Animated connecting timeline line */}
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+                            className="hidden md:block h-px bg-gradient-to-r from-[#F7931A] via-[#F7931A]/25 to-transparent origin-left mb-8"
+                        />
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                             {[
                                 {
@@ -313,7 +418,8 @@ export default function Home() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="glass p-8 flex flex-col gap-4 hover:border-[#22C55E]/20 transition-all duration-300 relative overflow-hidden"
+                                    whileHover={{ y: -6, borderColor: "rgba(247,147,26,0.3)" }}
+                                    className="glass p-8 flex flex-col gap-4 transition-colors duration-300 relative overflow-hidden cursor-default"
                                 >
                                     <span className="font-syne text-6xl font-extrabold text-white/5 absolute top-4 right-4 select-none leading-none">{item.step}</span>
                                     <span className="font-mono text-[10px] text-[#F7931A] uppercase tracking-widest font-bold">{item.step}</span>
@@ -387,6 +493,10 @@ export default function Home() {
                     </div>
                 </section>
 
+                <InteractivePrompt />
+
+                <AiWorkflowSection />
+
                 {/* SELECTED WORK */}
                 <section className="py-32 px-6 md:px-8 lg:px-20 bg-[#0A0A0A] relative z-10">
                     <div className="max-w-7xl mx-auto">
@@ -400,136 +510,105 @@ export default function Home() {
                                 <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase">Selected Work</h2>
                             </div>
                             <div className="h-px bg-outline-variant/20 flex-grow mx-4 md:mx-12 hidden sm:block"></div>
-                            <div className="font-mono text-xs md:text-sm opacity-50 uppercase tracking-widest">03 Projects</div>
+                            <div className="font-mono text-xs md:text-sm opacity-50 uppercase tracking-widest">02 Projects</div>
                         </motion.div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                            {/* Sipstr */}
-                            <motion.div 
-                                initial={{ opacity: 0, y: 30 }}
+                        <div className="flex flex-col gap-6">
+                            <ProjectCard
+                                title="Sipstr"
+                                summary="Real-time bar ordering platform — customers order from their phone, staff manage the queue live on a shared dashboard."
+                                category="Consumer App · Real-Time Systems"
+                                status="LIVE"
+                                statusVariant="live"
+                                tags={["React Native", "Socket.io", "Redis", "AWS", "Node.js"]}
+                                problem="Bars were losing revenue to long wait times and overwhelmed staff during peak hours. Manual ordering created race conditions at the bar counter."
+                                solution="Built a real-time ordering and queue management app with Socket.io for concurrent event handling and Redis to de-duplicate requests. Staff manage a live shared dashboard with zero page reloads."
+                                impact="~40% faster peak service — more throughput during the highest-margin hours. Zero operational failures on launch day. Payout reconciliation fully automated post-build."
+                                impactMetric="~40% faster peak service"
+                                techDecision="Chose Socket.io + Redis over polling to handle concurrent order bursts without race conditions or duplicate entries under load."
+                                href="/sipstr"
+                                accentColor="green"
+                            />
+                            <ProjectCard
+                                title="KAPS Admin"
+                                summary="Enterprise logistics dashboard — replaced spreadsheet-driven operations with live vehicle tracking, pricing, and order management across 5 cities."
+                                category="Enterprise Dashboard · Internal Tool"
+                                status="ENTERPRISE"
+                                statusVariant="enterprise"
+                                tags={["Next.js", "TypeScript", "PostgreSQL", "Node.js"]}
+                                problem="A logistics company was managing deliveries across multiple cities using spreadsheets. Pricing changed by the hour, and operations had no single source of truth."
+                                solution="Built a full enterprise dashboard: live order tracking, dynamic pricing engine, role-based access, and a normalised PostgreSQL schema designed to expand to new cities without refactoring."
+                                impact="~3 hrs/day of manual ops eliminated — $30,000+ in annual labour savings. Scaled from 2 → 5 cities without a single additional ops hire."
+                                impactMetric="$30K+ annual labour saved"
+                                techDecision="PostgreSQL schema was designed multi-tenancy-first so each new city was a config change, not a migration."
+                                href="/kaps"
+                                accentColor="orange"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                {/* FRACTIONAL CTO SPOTLIGHT */}
+                <section className="py-32 px-6 md:px-8 lg:px-20 bg-background relative z-10 border-t border-white/5 overflow-hidden">
+                    <div className="absolute inset-0 pointer-events-none">
+                        <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#F7931A]/[0.04] rounded-full blur-3xl" />
+                        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#F7931A]/20 to-transparent" />
+                    </div>
+                    <div className="max-w-7xl mx-auto relative">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            {/* Left: Pitch */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="md:col-span-7 group glass transition-all duration-500 hover:border-[#22C55E]/40 hover:shadow-[0_8px_48px_rgba(34,197,94,0.09)] relative overflow-hidden"
                             >
-                                <div className="p-8 md:p-12 flex flex-col h-full min-h-[500px] justify-between relative z-10">
-                                    <div>
-                                        <div className="flex justify-between items-start mb-6">
-                                            <h3 className="font-syne text-4xl font-bold tight-tracked uppercase">Sipstr</h3>
-                                            <span className="font-mono text-[10px] bg-surface-container-highest px-3 py-1 text-[#F7931A] border border-[#F7931A]/20 font-bold tracking-widest">LIVE</span>
-                                        </div>
-                                        <div className="space-y-5 mb-8 max-w-md">
-                                            <div>
-                                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Problem</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Bars were losing revenue to long wait times and overwhelmed staff during peak hours.</p>
-                                            </div>
-                                            <div>
-                                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Solution</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a real-time ordering and queue management app. Customers order from their phone, staff manage the queue live on a shared dashboard.</p>
-                                            </div>
-                                            <div>
-                                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Outcome</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed"><strong className="text-white">~40% reduction in peak wait times.</strong> Staff-to-table ratio improved. <strong className="text-white">Zero operational failures on launch day.</strong> Handled peak-hour traffic without performance degradation.</p>
-                                                <p className="font-mono text-xs text-white/40 leading-relaxed mt-2">Designed to handle concurrent real-time updates across devices without race conditions.</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-wrap gap-3 mb-10">
-                                            <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">React Native</span>
-                                            <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">Socket.io</span>
-                                            <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">Redis</span>
-                                        </div>
-                                    </div>
-                                    <Link href="/sipstr" className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm group-hover:text-[#22C55E] transition-colors w-max">
-                                        [ View Case Study ]
-                                        <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                    </Link>
+                                <div className="inline-flex items-center gap-2 border border-[#F7931A]/25 bg-[#F7931A]/[0.06] px-3 py-1.5 mb-8">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#F7931A]" />
+                                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A]">Retainer · Ongoing</span>
                                 </div>
-                                <div className="absolute -right-10 -bottom-10 w-80 h-80 opacity-5 group-hover:opacity-15 transition-opacity duration-700 pointer-events-none">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img alt="Dark bar interior" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkUxA3FoDyc6ELxZ0j1M0Ig3BifJnK7vuG3bT6EHI1hyqVhb3D-T_g3LloQajdooLgRZ6nxKIO96woucmIsGBqb8WsAjwUbPpkEs0jKlqN51VCkbWaPeRX2tlP5P-ssaRPrj2hU9t6ZoxAas2EgLTzdVtSsQwhrIongHLgZUwy6Vra9BCmP3ULlvJTohIIA-e7F0zk7mFaha0UF1mqEdGM-RqdohbYeExuRCdac9QJSzO8NQYlFZyEo82lAAyzYCkqOa0gfSMDwGI"/>
-                                </div>
-                            </motion.div>
-                            
-                            {/* KAPS Admin */}
-                            <motion.div 
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                                className="md:col-span-5 group glass transition-all duration-500 hover:border-white/25 hover:shadow-[0_8px_48px_rgba(0,0,0,0.4)] relative overflow-hidden"
-                            >
-                                <div className="p-8 md:p-12 flex flex-col h-full min-h-[500px] justify-between">
-                                    <div>
-                                        <div className="flex justify-between items-start mb-6">
-                                            <h3 className="font-syne text-4xl font-bold tight-tracked uppercase">KAPS Admin</h3>
-                                            <span className="font-mono text-[10px] bg-surface-container-highest px-3 py-1 text-white/50 border border-white/10 uppercase tracking-widest">ENTERPRISE</span>
-                                        </div>
-                                        <div className="space-y-5 mb-8">
-                                            <div>
-                                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Problem</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">A logistics company was managing deliveries across multiple cities using spreadsheets.</p>
-                                            </div>
-                                            <div>
-                                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Solution</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a full enterprise dashboard to track vehicles, orders, and live pricing in real time.</p>
-                                            </div>
-                                            <div>
-                                                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Outcome</span>
-                                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed"><strong className="text-white">~3 hours of daily manual admin eliminated.</strong> <strong className="text-white">Scaled from 2 to 5 cities without a single additional ops hire.</strong> Enabled operations to scale without increasing headcount.</p>
-                                                <p className="font-mono text-xs text-white/40 leading-relaxed mt-2">Built with a schema that supported rapid expansion across cities without refactoring.</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-wrap gap-3 mb-10">
-                                            <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">TypeScript</span>
-                                            <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">PostgreSQL</span>
-                                        </div>
-                                    </div>
-                                    <Link href="/kaps" className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm hover:text-white transition-colors text-left text-white/50 group-hover:text-[#22C55E] w-max">
-                                        [ View Case Study ]
-                                        <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                    </Link>
-                                </div>
+                                <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase mb-6 leading-[1.05]">
+                                    Your<br />Fractional<br />CTO
+                                </h2>
+                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed max-w-md mb-4 border-l-2 border-[#F7931A] pl-6">
+                                    Senior technical ownership without the £150K+/yr full-time cost. Architecture decisions, engineering standards, and strategic clarity — from day one.
+                                </p>
+                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed max-w-md pl-6">
+                                    Built for founders scaling their first engineering team, and growing companies that need a senior technical voice without a full headcount slot.
+                                </p>
                             </motion.div>
 
-                            {/* BitMeet */}
-                            <motion.div 
-                                initial={{ opacity: 0, y: 30 }}
+                            {/* Right: What&apos;s included + CTA */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="md:col-span-12 group glass transition-all duration-500 hover:border-[#22C55E]/35 hover:shadow-[0_8px_48px_rgba(34,197,94,0.07)] relative overflow-hidden"
+                                transition={{ delay: 0.1 }}
+                                className="glass p-8 md:p-10"
                             >
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                                    <div className="p-8 md:p-16 flex flex-col justify-center order-2 md:order-1 relative z-10">
-                                        <div>
-                                            <h3 className="font-syne text-5xl font-bold tight-tracked mb-6 text-[#F7931A] uppercase">BitMeet</h3>
-                                            <div className="space-y-5 mb-10 max-w-lg">
-                                                <div>
-                                                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Problem</span>
-                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Bitcoin meetup organisers had no reliable way to guarantee attendance. No-shows were wasting everyone&apos;s time and effort.</p>
-                                                </div>
-                                                <div>
-                                                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Solution</span>
-                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed">Built a platform where attendees put up a small Bitcoin Lightning deposit to confirm their seat, automatically refunded when they show up.</p>
-                                                </div>
-                                                <div>
-                                                    <span className="font-mono text-[10px] uppercase tracking-widest text-[#F7931A] font-bold block mb-1">Outcome</span>
-                                                    <p className="font-mono text-sm text-on-surface-variant leading-relaxed"><strong className="text-white">No-show rate dropped by ~70%.</strong> Organisers reported <strong className="text-white">2x better attendance reliability</strong> from the first event. Created a reliable commitment mechanism for event attendance.</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-wrap gap-3 mb-12">
-                                                <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">LND Node</span>
-                                                <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">Go</span>
-                                                <span className="font-mono text-[10px] px-3 py-1.5 bg-surface-variant text-white uppercase tracking-wider">Web3.js</span>
-                                            </div>
-                                        </div>
-                                        <button className="inline-flex items-center gap-4 font-mono font-bold uppercase text-sm group-hover:text-[#22C55E] transition-colors text-left w-max opacity-50 cursor-default">
-                                            [ Case Study Coming Soon ]
-                                            <span className="material-symbols-outlined">hourglass_empty</span>
-                                        </button>
-                                    </div>
-                                    <div className="h-64 md:h-full overflow-hidden order-1 md:order-2">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img alt="Blockchain visualization" className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvx1NL_v5sWl3kRv4wXwsYdr7tiRUl_jKRWBgsyOkJt3Kv_2tvssNaovD4cOiP743i-pXn15P6dMaYwOSsJ6AgznKxOYJ74Nnfmyvti7Kf322i9-kaHIayZnFayw4OH2dmwEeOgNbTZ6pOJxz-IdlswNd5numAEYaV7ljf3nNYzL7haRtyoNH13lcV-Z50frAYz85ycJVvEOUPoVciiDU4IBMUiwZqgCfMKW19GBK5ci42kQ6go41g7a5h6z-6TrsAazZD3-KCdo0"/>
-                                    </div>
+                                <h3 className="font-syne text-xl font-bold uppercase text-white mb-6">What&apos;s Included</h3>
+                                <ul className="space-y-4 mb-10">
+                                    {[
+                                        { icon: "event", text: "Weekly 60-min strategy call" },
+                                        { icon: "account_tree", text: "Architecture & stack decisions" },
+                                        { icon: "rate_review", text: "Unlimited async code reviews" },
+                                        { icon: "group", text: "Engineering hiring & interview support" },
+                                        { icon: "checklist", text: "Sprint planning & road map review" },
+                                        { icon: "emergency", text: "Emergency support included" },
+                                    ].map(item => (
+                                        <li key={item.text} className="flex items-start gap-3">
+                                            <span className="material-symbols-outlined text-[#F7931A] text-base flex-shrink-0 mt-0.5">{item.icon}</span>
+                                            <span className="font-mono text-sm text-on-surface-variant">{item.text}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="pt-6 border-t border-white/5">
+                                    <Link
+                                        href="/about#contact"
+                                        className="inline-flex items-center gap-3 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-6 py-3 font-mono font-bold uppercase tracking-widest text-xs hover:shadow-[0_0_20px_rgba(247,147,26,0.4)] transition-all duration-300 active:scale-95 group"
+                                    >
+                                        Discuss Retainer
+                                        <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>
@@ -537,24 +616,63 @@ export default function Home() {
                 </section>
 
                 {/* FINAL CTA */}
-                <section className="py-40 px-6 md:px-8 lg:px-20 bg-background relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
+                <section className="py-32 px-6 md:px-8 lg:px-20 bg-surface-container-lowest relative z-10 border-t border-white/5">
+                    <div className="max-w-7xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            className="text-center mb-16"
                         >
-                            <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase mb-8">
-                                Got a problem worth solving<br className="hidden md:block"/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFB874]"> or something that&apos;s already breaking?</span>
+                            <h2 className="font-syne text-4xl md:text-6xl font-extrabold tight-tracked text-white uppercase mb-4">
+                                Ready to Build?
                             </h2>
-                            <p className="font-mono text-base text-on-surface-variant max-w-2xl mx-auto mb-4 leading-relaxed">
-                                Tell me what you&apos;re building and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
+                            <p className="font-mono text-sm text-on-surface-variant max-w-xl mx-auto">
+                                Tell me what you&apos;re working on. I&apos;ll tell you exactly how I can help — no commitment.
                             </p>
-                            <Link href="/about#contact" className="inline-flex items-center gap-4 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-10 py-5 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all duration-300 active:scale-95 group text-base mt-8 mx-auto">
-                                Start a Project
-                                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </Link>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="glass p-10 md:p-16 flex flex-col md:flex-row gap-10 md:items-center hover:border-[#F7931A]/35 transition-all duration-300"
+                        >
+                            <div className="flex-1 flex flex-col gap-6">
+                                <div className="flex items-center gap-3">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#F7931A] animate-pulse" />
+                                    <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#F7931A] font-bold">Currently Available</span>
+                                </div>
+                                <h3 className="font-syne text-2xl md:text-4xl font-extrabold uppercase tight-tracked text-white leading-snug">
+                                    Let&apos;s build your<br /> scalable product
+                                </h3>
+                                <p className="font-mono text-sm text-on-surface-variant leading-relaxed max-w-lg">
+                                    MVP to production in 6–12 weeks. Real-time systems, dashboards, mobile apps. Built to scale from day one — not rebuilt in six months when users arrive.
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                    {["MVP Build", "Real-time Systems", "Dashboards", "Fractional CTO"].map(s => (
+                                        <span key={s} className="font-mono text-[10px] px-3 py-1 bg-surface-variant text-white uppercase tracking-wide">{s}</span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4 md:items-start">
+                                <a
+                                    href="https://calendly.com/letyashknow"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-3 bg-gradient-to-br from-[#F7931A] to-[#FFB874] text-[#4b2800] px-8 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(247,147,26,0.4)] transition-all duration-300 active:scale-95 group/link w-fit"
+                                >
+                                    Book a 30-min Call
+                                    <span className="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">calendar_month</span>
+                                </a>
+                                <Link
+                                    href="/about#contact"
+                                    className="inline-flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-widest text-[#F7931A] border border-[#F7931A]/30 px-8 py-4 hover:bg-[#F7931A]/10 transition-all duration-200 w-fit"
+                                >
+                                    Send a Message
+                                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                </Link>
+                            </div>
                         </motion.div>
                     </div>
                 </section>

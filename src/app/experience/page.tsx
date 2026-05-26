@@ -7,7 +7,6 @@ export default function Experience() {
     const projects = [
         { id: '01', type: 'NODE', title: 'Sipstr', icon: 'local_bar', desc: 'Real-time bar ordering platform optimized for high-concurrency environments.', tags: ['React Native', 'AWS', 'Socket.io'], path: '/sipstr', status: 'LIVE CASE' },
         { id: '02', type: 'FLOW', title: 'KAPS Admin', icon: 'analytics', desc: 'Enterprise-grade dashboard for logistics tracking and fleet orchestration.', tags: ['Next.js', 'PostgreSQL', 'TypeScript'], path: '/kaps', status: 'ENTERPRISE' },
-        { id: '03', type: 'SYNC', title: 'BitMeet', icon: 'video_call', desc: 'Bitcoin-native meetup platform using Lightning Network for micro-staking event attendance. Built with Go backend, LND node integration, and WebRTC for P2P conferencing.', tags: ['WebRTC', 'LND Node', 'Go'] }
     ];
 
     return (
@@ -70,7 +69,7 @@ export default function Experience() {
                                             </Link>
                                         ) : (
                                             <span className="inline-flex items-center gap-3 opacity-50 cursor-not-allowed">
-                                                <span className="font-mono text-xs font-bold uppercase tracking-widest text-white">Case Study Pending</span>
+                                                <span className="font-mono text-xs font-bold uppercase tracking-widest text-white">Coming Soon</span>
                                             </span>
                                         )}
                                     </div>

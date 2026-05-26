@@ -14,7 +14,7 @@ const stack = [
     { category: "Backend", items: ["Node.js", "Java 21 / Spring Boot", "Go", "REST & GraphQL", "WebSockets"] },
     { category: "Data", items: ["PostgreSQL", "PostGIS", "Redis", "RabbitMQ"] },
     { category: "Infrastructure", items: ["AWS (EC2, S3, RDS, SQS)", "Terraform", "Docker", "CI/CD (GitHub Actions)"] },
-    { category: "Payments", items: ["Stripe Connect", "LND / Lightning Network"] },
+    { category: "Payments", items: ["Stripe Connect"] },
 ];
 
 const timeline = [
@@ -22,7 +22,7 @@ const timeline = [
         year: "2023 – Present",
         role: "Freelance Systems Architect",
         company: "Independent",
-        description: "Designing and building full-stack products for early-stage and growth-stage startups. Key projects: Sipstr (4-sided alcohol delivery marketplace), KAPS Admin (multi-city logistics control plane), BitMeet (Bitcoin-native events platform).",
+        description: "Designing and building full-stack products for early-stage and growth-stage startups. Key projects: Sipstr (4-sided alcohol delivery marketplace), KAPS Admin (multi-city logistics control plane).",
         highlight: true,
     },
     {
@@ -133,16 +133,27 @@ export default function About() {
                         <h2 className="font-syne text-[clamp(1.5rem,6.5vw,3rem)] md:text-7xl font-extrabold tight-tracked uppercase leading-[1.05] text-[#F7931A] mb-8">
                             or something<br />that&apos;s already breaking?
                         </h2>
-                        <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-10 leading-relaxed">
+                        <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-6 leading-relaxed">
                             Tell me what you&apos;re building and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
                         </p>
-                        <a
-                            href="#contact-form"
-                            className="inline-flex items-center gap-3 bg-[#F7931A] text-[#4b2800] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(34,197,94,0.5)] transition-all duration-300 active:scale-95"
-                        >
-                            Start a Project
-                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                        </a>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+                            <a
+                                href="https://calendly.com/letyashknow"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-3 bg-[#F7931A] text-[#4b2800] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95"
+                            >
+                                <span className="material-symbols-outlined text-sm">calendar_month</span>
+                                Book a 30-min Call
+                            </a>
+                            <a
+                                href="#contact-form"
+                                className="inline-flex items-center gap-3 border border-[#F7931A]/40 text-[#F7931A] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:bg-[#F7931A]/10 transition-all duration-300 active:scale-95"
+                            >
+                                Send a Message
+                                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
                     </div>
 
                     <div id="contact-form" className="glass p-5 sm:p-8 md:p-12">
