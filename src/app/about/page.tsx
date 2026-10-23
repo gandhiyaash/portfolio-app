@@ -10,26 +10,35 @@ export const metadata: Metadata = {
 };
 
 const stack = [
-    { category: "Frontend", items: ["React", "Next.js", "React Native", "TypeScript", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Java 21 / Spring Boot", "Go", "REST & GraphQL", "WebSockets"] },
-    { category: "Data", items: ["PostgreSQL", "PostGIS", "Redis", "RabbitMQ"] },
-    { category: "Infrastructure", items: ["AWS (EC2, S3, RDS, SQS)", "Terraform", "Docker", "CI/CD (GitHub Actions)"] },
-    { category: "Payments", items: ["Stripe Connect"] },
+    { category: "Frontend", items: ["React 19", "Next.js", "TypeScript", "Redux Toolkit", "Zustand", "React Query / RTK Query", "Tailwind CSS", "MUI", "shadcn/ui"] },
+    { category: "Mobile", items: ["React Native", "Expo"] },
+    { category: "Backend", items: ["Java 21 / Spring Boot", "Node.js", "Socket.io", "REST APIs", "WebSockets"] },
+    { category: "Data", items: ["PostgreSQL", "PostGIS", "Redis", "Supabase"] },
+    { category: "Infrastructure", items: ["AWS", "Docker", "CI/CD", "Vercel"] },
+    { category: "Payments & Integrations", items: ["Stripe", "Firebase", "Google Maps", "Razorpay"] },
+    { category: "Automation", items: ["RPA (Automation Anywhere)", "Data pipelines"] },
 ];
 
 const timeline = [
     {
-        year: "2023 – Present",
-        role: "Freelance Systems Architect",
-        company: "Independent",
-        description: "Designing and building full-stack products for early-stage and growth-stage startups. Key projects: Sipstr (4-sided alcohol delivery marketplace), KAPS Admin (multi-city logistics control plane).",
+        year: "",
+        role: "Lead Engineer",
+        company: "Client Work",
+        description: "Led engineering on client platforms in on-demand delivery and logistics. Sipstr: built four production apps (customer, in-store tablet, driver, marketing site) and major vendor/admin portal features for a real-time, 4-sided alcohol delivery marketplace. KAPS Admin: designed and built the operations admin portal (30+ modules) for a multi-city on-demand platform.",
         highlight: true,
     },
     {
-        year: "2022 – 2023",
-        role: "Software Engineer",
+        year: "",
+        role: "Backend / Platform Engineer",
         company: "Barclays",
-        description: "Developed and maintained internal tooling and consumer-facing services within enterprise engineering teams. Gained deep exposure to large-scale distributed systems, security standards, and production reliability practices.",
+        description: "Owned and contributed to data pipeline and reporting systems in a large-scale financial environment. Improved pipeline throughput and reliability by 30-50% through query optimisation, infrastructure improvements and more resilient service design. Built Dockerised services with automated CI/CD under strict security, compliance and distributed-systems standards.",
+        highlight: false,
+    },
+    {
+        year: "",
+        role: "Robotic Process Automation Consultant",
+        company: "Saint-Gobain INDEC",
+        description: "Built bots across Web, SAP, Excel and Outlook automation, with a 50% improvement in process agility and a 40% throughput gain on invoice processing. Migrated automation workflows from Automation Anywhere v10 to v11 across production bots.",
         highlight: false,
     },
 ];
@@ -86,7 +95,7 @@ export default function About() {
                                         <h3 className="font-syne text-xl font-bold uppercase text-white">{item.role}</h3>
                                         <span className="font-mono text-sm text-[#F7931A]">{item.company}</span>
                                     </div>
-                                    <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 whitespace-nowrap">{item.year}</span>
+                                    {item.year && <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 whitespace-nowrap">{item.year}</span>}
                                 </div>
                                 <p className="font-mono text-sm text-on-surface-variant leading-relaxed">{item.description}</p>
                             </div>

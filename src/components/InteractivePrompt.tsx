@@ -7,7 +7,7 @@ const prompts = [
     {
         label: "Tell me about Sipstr",
         response:
-            "Sipstr is a real-time bar ordering platform I built for a hospitality client. The core challenge was handling concurrent orders across multiple bar stations without race conditions. I used Socket.io with Redis pub/sub for queue deduplication and a React Native app for customers paired with a shared staff dashboard. It shipped live handling peak-hour traffic with zero operational failures and reduced wait times by ~40%.",
+            "Sipstr is a multi-vendor alcohol delivery marketplace with four sides: customers, stores, drivers and admins. I led engineering and built four production apps: a React Native customer app (about 40 screens, Stripe payments, age verification), a Store Ops tablet app for staff to run the live order queue, a driver app with QR scan-to-assign delivery, and the marketing site. I also contributed major features to the vendor and admin web portals and to the Spring Boot backend. Real-time order flow runs on Socket.io and Redis, and it shipped live with ~40% shorter peak wait times.",
     },
     {
         label: "What do you specialise in?",
@@ -17,7 +17,7 @@ const prompts = [
     {
         label: "How do you handle scale?",
         response:
-            "Scale is an architecture decision made upfront, not a retrofit. Database schemas designed for multi-tenancy, Redis for queue management under burst load, WebSocket event handling that avoids race conditions. On the KAPS project, the PostgreSQL schema was designed so each new city was a config change — that's how we went from 2 to 5 cities without a single refactor.",
+            "Scale is an architecture decision made upfront, not a retrofit. Database schemas designed for multi-tenancy, Redis for queue management under burst load, WebSocket event handling that avoids race conditions. On the KAPS project, pricing and region setup are configuration in the admin portal (City, Service, Vehicle, then peak-hour rules by pincode), so adding a new city is a setup task, not a rebuild.",
     },
     {
         label: "Enterprise vs startup experience?",

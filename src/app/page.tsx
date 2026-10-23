@@ -409,13 +409,13 @@ export default function Home() {
                         <div className="flex flex-col gap-6">
                             <ProjectCard
                                 title="Sipstr"
-                                summary="Real-time bar ordering platform — customers order from their phone, staff manage the queue live on a shared dashboard."
+                                summary="Multi-vendor alcohol delivery marketplace — four production apps (customer, in-store tablet, driver, marketing site) plus vendor and admin web portals, all on live order state."
                                 category="Consumer App · Real-Time Systems"
                                 status="LIVE"
                                 statusVariant="live"
-                                tags={["React Native", "Socket.io", "Redis", "AWS", "Node.js"]}
-                                problem="Bars were losing revenue to long wait times and overwhelmed staff during peak hours. Manual ordering created race conditions at the bar counter."
-                                solution="Built a real-time ordering and queue management app with Socket.io for concurrent event handling and Redis to de-duplicate requests. Staff manage a live shared dashboard with zero page reloads."
+                                tags={["React Native", "Expo", "Socket.io", "Redis", "AWS", "Spring Boot"]}
+                                problem="Alcohol delivery has four parties — customers, stores, drivers and admins — who all need the same live order state, plus age checks, delivery zones, substitutions and refunds."
+                                solution="Led engineering and built the customer app (about 40 screens), the Store Ops tablet app, the driver app and the marketing site, and contributed major features to the vendor and admin portals. Real-time order flow runs on Socket.io and Redis."
                                 impact="~40% faster peak service — more throughput during the highest-margin hours. Zero operational failures on launch day. Payout reconciliation fully automated post-build."
                                 impactMetric="~40% faster peak service"
                                 techDecision="Chose Socket.io + Redis over polling to handle concurrent order bursts without race conditions or duplicate entries under load."
@@ -424,16 +424,16 @@ export default function Home() {
                             />
                             <ProjectCard
                                 title="KAPS Admin"
-                                summary="Enterprise logistics dashboard — replaced spreadsheet-driven operations with live vehicle tracking, pricing, and order management across 5 cities."
+                                summary="Operations admin portal for a multi-city on-demand platform — region-scoped access, driver KYC, pincode maps and pricing setup by city, service and vehicle."
                                 category="Enterprise Dashboard · Internal Tool"
                                 status="ENTERPRISE"
                                 statusVariant="enterprise"
-                                tags={["Next.js", "TypeScript", "PostgreSQL", "Node.js"]}
+                                tags={["React 19", "TypeScript", "RTK Query", "Spring Boot", "PostgreSQL"]}
                                 problem="A logistics company was managing deliveries across multiple cities using spreadsheets. Pricing changed by the hour, and operations had no single source of truth."
-                                solution="Built a full enterprise dashboard: live order tracking, dynamic pricing engine, role-based access, and a normalised PostgreSQL schema designed to expand to new cities without refactoring."
+                                solution="Designed and built the admin portal end to end: 30+ modules, role-based and region-scoped access, multi-level driver KYC, map-based pincode tools, pricing setup by city, service and vehicle, and a drill-down dashboard with reports."
                                 impact="~3 hrs/day of manual ops eliminated — $30,000+ in annual labour savings. Scaled from 2 → 5 cities without a single additional ops hire."
                                 impactMetric="$30K+ annual labour saved"
-                                techDecision="PostgreSQL schema was designed multi-tenancy-first so each new city was a config change, not a migration."
+                                techDecision="Chose RTK Query to stay consistent with the Redux auth store; tag-based invalidation keeps lists fresh after complex pricing changes."
                                 href="/kaps"
                                 accentColor="orange"
                             />

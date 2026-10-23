@@ -9,26 +9,18 @@ const PROJECTS = [
     {
         id: "sipstr",
         title: "Sipstr",
-        desc: "Real-time bar ordering platform optimized for high-concurrency environments.",
-        tags: ["React Native", "Node.js", "AWS"],
+        desc: "Multi-vendor alcohol delivery marketplace: four production apps on a real-time, 4-sided platform.",
+        tags: ["React Native", "Socket.io", "Spring Boot"],
         icon: "terminal",
         link: "/sipstr"
     },
     {
         id: "kaps",
         title: "KAPS Admin",
-        desc: "Enterprise-grade dashboard for logistics tracking and fleet orchestration.",
-        tags: ["TypeScript", "PostgreSQL", "Next.js"],
+        desc: "Operations admin portal for a multi-city on-demand platform: region-scoped access, driver KYC, pincode maps and pricing setup.",
+        tags: ["React 19", "TypeScript", "Spring Boot"],
         icon: "analytics",
-        link: "#"
-    },
-    {
-        id: "satmatch",
-        title: "Satmatch",
-        desc: "Spatial data analysis engine for satellite imagery matching and tracking.",
-        tags: ["TensorFlow", "PostGIS", "Python"],
-        icon: "satellite_alt",
-        link: "#"
+        link: "/kaps"
     }
 ];
 

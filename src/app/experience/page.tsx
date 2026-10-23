@@ -5,8 +5,8 @@ import * as motion from "framer-motion/client";
 
 export default function Experience() {
     const projects = [
-        { id: '01', type: 'NODE', title: 'Sipstr', icon: 'local_bar', desc: 'Real-time bar ordering platform optimized for high-concurrency environments.', tags: ['React Native', 'AWS', 'Socket.io'], path: '/sipstr', status: 'LIVE CASE' },
-        { id: '02', type: 'FLOW', title: 'KAPS Admin', icon: 'analytics', desc: 'Enterprise-grade dashboard for logistics tracking and fleet orchestration.', tags: ['Next.js', 'PostgreSQL', 'TypeScript'], path: '/kaps', status: 'ENTERPRISE' },
+        { id: '01', type: 'NODE', title: 'Sipstr', icon: 'local_bar', desc: 'Multi-vendor alcohol delivery marketplace: four production apps on a real-time, 4-sided platform.', tags: ['React Native', 'Expo', 'Socket.io', 'AWS'], path: '/sipstr', status: 'LIVE CASE' },
+        { id: '02', type: 'FLOW', title: 'KAPS Admin', icon: 'analytics', desc: 'Operations admin portal for a multi-city on-demand platform: region-scoped access, driver KYC, pincode maps and pricing setup.', tags: ['React 19', 'TypeScript', 'Spring Boot'], path: '/kaps', status: 'ENTERPRISE' },
     ];
 
     return (
