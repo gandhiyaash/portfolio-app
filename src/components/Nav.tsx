@@ -37,7 +37,7 @@ export const Nav = () => {
             </Link>
             <div className="hidden md:flex items-center gap-8">
                 <Link href="/" className={`font-mono text-xs uppercase tracking-widest transition-all ${isActive('/') ? 'text-[#F7931A] border-b-2 border-[#F7931A] pb-1' : 'text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#22C55E]'}`}>Home</Link>
-                <Link href="/#services" className="font-mono text-xs uppercase tracking-widest transition-all text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#22C55E]">Services</Link>
+                <Link href="/services" className={`font-mono text-xs uppercase tracking-widest transition-all ${isActive('/services') ? 'text-[#F7931A] border-b-2 border-[#F7931A] pb-1' : 'text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#22C55E]'}`}>Services</Link>
                 <Link href="/experience" className={`font-mono text-xs uppercase tracking-widest transition-all ${isActive('/experience') || pathname.includes('/sipstr') || pathname.includes('/kaps') ? 'text-[#F7931A] border-b-2 border-[#F7931A] pb-1' : 'text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#22C55E]'}`}>Case Studies</Link>
                 <Link href="/about" className={`font-mono text-xs uppercase tracking-widest transition-all ${isActive('/about') ? 'text-[#F7931A] border-b-2 border-[#F7931A] pb-1' : 'text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#22C55E]'}`}>About</Link>
             </div>
@@ -67,7 +67,7 @@ export const Nav = () => {
         >
             <nav className="flex flex-col gap-8 flex-1">
                 <Link href="/" onClick={() => setMenuOpen(false)} className={`font-syne text-3xl font-extrabold uppercase tracking-tight transition-all ${isActive('/') ? 'text-[#F7931A]' : 'text-white hover:text-[#F7931A]'}`}>Home</Link>
-                <Link href="/#services" onClick={() => setMenuOpen(false)} className="font-syne text-3xl font-extrabold uppercase tracking-tight text-white hover:text-[#F7931A] transition-all">Services</Link>
+                <Link href="/services" onClick={() => setMenuOpen(false)} className={`font-syne text-3xl font-extrabold uppercase tracking-tight transition-all ${isActive('/services') ? 'text-[#F7931A]' : 'text-white hover:text-[#F7931A]'}`}>Services</Link>
                 <Link href="/experience" onClick={() => setMenuOpen(false)} className={`font-syne text-3xl font-extrabold uppercase tracking-tight transition-all ${isActive('/experience') || pathname.includes('/sipstr') || pathname.includes('/kaps') ? 'text-[#F7931A]' : 'text-white hover:text-[#F7931A]'}`}>Case Studies</Link>
                 <Link href="/about" onClick={() => setMenuOpen(false)} className={`font-syne text-3xl font-extrabold uppercase tracking-tight transition-all ${isActive('/about') ? 'text-[#F7931A]' : 'text-white hover:text-[#F7931A]'}`}>About</Link>
             </nav>

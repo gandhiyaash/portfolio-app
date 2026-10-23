@@ -136,24 +136,6 @@ export default function About() {
                         <p className="font-mono text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-6 leading-relaxed">
                             Tell me what you&apos;re building and where it&apos;s breaking. I&apos;ll tell you exactly how I can help.
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-                            <a
-                                href="https://calendly.com/letyashknow"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-3 bg-[#F7931A] text-[#4b2800] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:shadow-[0_0_24px_rgba(247,147,26,0.5)] transition-all duration-300 active:scale-95"
-                            >
-                                <span className="material-symbols-outlined text-sm">calendar_month</span>
-                                Book a 30-min Call
-                            </a>
-                            <a
-                                href="#contact-form"
-                                className="inline-flex items-center gap-3 border border-[#F7931A]/40 text-[#F7931A] px-10 py-4 font-mono font-bold uppercase tracking-widest hover:bg-[#F7931A]/10 transition-all duration-300 active:scale-95"
-                            >
-                                Send a Message
-                                <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                            </a>
-                        </div>
                     </div>
 
                     <div id="contact-form" className="glass p-5 sm:p-8 md:p-12">
